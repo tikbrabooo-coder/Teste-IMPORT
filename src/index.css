@@ -1231,3 +1231,11 @@ footer {
   border-top: 1px solid #E3D4BE !important;
   border-bottom: 1px solid #E3D4BE !important;
 }
+
+
+/* A seção de oferta usa o mesmo fundo da seção “O que você vai receber”. */
+#ofertas {
+  background: #F4F7FB !important;
+  border-top: 1px solid #E5EAF1 !important;
+  border-bottom: 1px solid #E5EAF1 !important;
+}
