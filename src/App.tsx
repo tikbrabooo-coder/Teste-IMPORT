@@ -120,7 +120,7 @@ function Bonuses(){
   return <section id="bonus-section" className="perf-section px-4 py-12 sm:py-16">
     <div className="mx-auto max-w-6xl">
       <div className="bonus-heading mb-7 text-center">
-        <h2 className="bonus-title">E você ainda recebe<br/>um pacote com <span>5 BÔNUS</span></h2>
+        <h2 className="bonus-title"><span className="bonus-title-line">E você ainda recebe</span><span className="bonus-title-line">um pacote com <span className="bonus-title-highlight">5 BÔNUS</span></span></h2>
         <p className="bonus-swipe-hint"><span aria-hidden="true">←</span> DESLIZE PARA O LADO PARA VER MAIS <span aria-hidden="true">→</span></p>
       </div>
 
