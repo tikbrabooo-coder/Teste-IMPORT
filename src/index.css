@@ -1218,3 +1218,8 @@ footer {
     font-size: 11px !important;
   }
 }
+
+/* Cor solicitada para a seção “O que você vai receber” / prévias do material. */
+#mapas-preview {
+  background: #F4F7FB !important;
+}
