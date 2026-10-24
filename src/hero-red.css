@@ -266,3 +266,154 @@
   box-shadow: none !important;
   border-radius: 0 !important;
 }
+
+
+/* Bônus: fundo preto-azulado e cartões em carrossel contínuo, como as prévias. */
+#bonus-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #030914 !important;
+  background-image:
+    linear-gradient(rgba(80, 133, 174, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 133, 174, .045) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 18%, rgba(32, 93, 143, .18), transparent 62%),
+    linear-gradient(115deg, #101f30 0%, #071326 48%, #030817 100%) !important;
+  background-size: 42px 42px, 42px 42px, auto, auto !important;
+  border-top: 1px solid rgba(83, 142, 183, .12) !important;
+  border-bottom: 1px solid rgba(83, 142, 183, .12) !important;
+}
+
+#bonus-section h2 {
+  color: #F8FAFC !important;
+}
+#bonus-section > div > div:first-child > p:last-child {
+  color: #B8C7D9 !important;
+}
+#bonus-section .section-kicker {
+  border-color: rgba(109, 181, 225, .28) !important;
+  background: rgba(11, 28, 49, .75) !important;
+  color: #A9DDF8 !important;
+  box-shadow: none !important;
+}
+#bonus-section .section-kicker svg {
+  color: #75C8F0 !important;
+}
+
+#bonus-section .bonus-auto-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#bonus-section .bonus-auto-track {
+  display: flex;
+  width: max-content;
+  align-items: stretch;
+  will-change: transform;
+  animation: maps-preview-marquee 62s linear infinite;
+}
+
+#bonus-section .bonus-auto-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: stretch;
+  gap: 1rem;
+  padding-right: 1rem;
+  white-space: normal;
+}
+
+#bonus-section .bonus-auto-group[aria-hidden="true"] {
+  pointer-events: none;
+}
+
+#bonus-section .bonus-auto-group .bonus-card {
+  display: flex !important;
+  flex: 0 0 auto !important;
+  flex-direction: column !important;
+  width: min(78vw, 360px) !important;
+  max-width: 360px !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(119, 179, 218, .28) !important;
+  border-radius: 20px !important;
+  background: linear-gradient(155deg, #FFFFFF 0%, #F4F8FC 100%) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .28) !important;
+}
+
+#bonus-section .bonus-card-image {
+  width: 92% !important;
+  aspect-ratio: 1 / 1 !important;
+  flex: 0 0 auto !important;
+  margin: 10px auto 0 !important;
+  border-radius: 15px !important;
+  background: #F7FAFD !important;
+}
+#bonus-section .bonus-card-image img {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 5px !important;
+  object-fit: contain !important;
+}
+
+#bonus-section .bonus-card-copy {
+  flex: 1 0 auto;
+  padding: 10px 13px 14px !important;
+}
+#bonus-section .bonus-card-copy p:first-child {
+  margin: 0 !important;
+  color: #10243B !important;
+  font-size: 15px !important;
+  font-weight: 850 !important;
+  line-height: 1.35 !important;
+}
+#bonus-section .bonus-card-copy p:last-child {
+  margin: 5px 0 0 !important;
+  color: #5B6F85 !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+}
+
+#bonus-section .bonus-auto-viewport:hover .bonus-auto-track {
+  animation-play-state: paused;
+}
+
+@media (min-width: 640px) {
+  #bonus-section .bonus-auto-group {
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  #bonus-section .bonus-auto-track {
+    animation-duration: 82s;
+  }
+}
+@media (min-width: 1024px) {
+  #bonus-section .bonus-auto-track {
+    animation-duration: 105s;
+  }
+}
+@media (max-width: 640px) {
+  #bonus-section .bonus-auto-track {
+    animation-duration: 55s;
+  }
+  #bonus-section .bonus-auto-group {
+    gap: 12px;
+    padding-right: 12px;
+  }
+  #bonus-section .bonus-auto-group .bonus-card {
+    width: 78vw !important;
+    max-width: 320px !important;
+    border-radius: 18px !important;
+  }
+  #bonus-section .bonus-card-copy {
+    padding: 9px 12px 12px !important;
+  }
+  #bonus-section .bonus-card-copy p:first-child {
+    font-size: 14px !important;
+  }
+  #bonus-section .bonus-card-copy p:last-child {
+    font-size: 11px !important;
+  }
+}
