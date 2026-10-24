@@ -417,3 +417,203 @@
     font-size: 11px !important;
   }
 }
+
+
+/* Bônus: composição editorial da referência enviada, com rolagem manual por toque. */
+#bonus-section {
+  background: #030916 !important;
+  background-image: none !important;
+  border-color: rgba(84, 132, 184, .12) !important;
+  padding-top: 46px !important;
+  padding-bottom: 42px !important;
+}
+
+#bonus-section .bonus-heading {
+  margin-bottom: 18px !important;
+}
+
+#bonus-section .bonus-title {
+  margin: 0;
+  color: #FFF9F0 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(2.2rem, 8vw, 3.35rem) !important;
+  font-weight: 950 !important;
+  line-height: .98 !important;
+  letter-spacing: -.065em !important;
+  text-transform: none !important;
+}
+
+#bonus-section .bonus-title span {
+  color: #58A9D4 !important;
+}
+
+#bonus-section .bonus-swipe-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 17px 0 20px !important;
+  color: #5CAEDB !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  line-height: 1.3 !important;
+  letter-spacing: .045em !important;
+  text-transform: uppercase;
+}
+#bonus-section .bonus-swipe-hint span {
+  font-size: 15px;
+  line-height: 1;
+}
+
+#bonus-section .bonus-carousel-viewport {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  touch-action: pan-x pan-y;
+  padding: 0 0 8px;
+}
+#bonus-section .bonus-carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+#bonus-section .bonus-carousel-track {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  width: max-content;
+  padding: 0 0 0;
+}
+
+#bonus-section .bonus-carousel-track .bonus-card {
+  display: flex !important;
+  flex: 0 0 auto !important;
+  flex-direction: column !important;
+  width: min(82vw, 316px) !important;
+  max-width: 316px !important;
+  min-height: 500px;
+  overflow: hidden !important;
+  scroll-snap-align: start;
+  border: 1px solid #244568 !important;
+  border-radius: 21px !important;
+  background: #07101D !important;
+  box-shadow: none !important;
+  color: #F8FAFC !important;
+}
+
+#bonus-section .bonus-card-image {
+  display: flex !important;
+  width: calc(100% - 30px) !important;
+  aspect-ratio: 1 / 1 !important;
+  flex: 0 0 auto !important;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  background: #F5F2EB !important;
+}
+#bonus-section .bonus-card-image img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  padding: 9px !important;
+  object-fit: contain !important;
+}
+
+#bonus-section .bonus-card-copy {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  padding: 16px 15px 19px !important;
+  text-align: left;
+}
+#bonus-section .bonus-card-index {
+  margin: 0 0 8px !important;
+  color: #5CAEDB !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  letter-spacing: .07em !important;
+}
+#bonus-section .bonus-card-copy h3 {
+  margin: 0 !important;
+  color: #FFF9F0 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 900 !important;
+  line-height: 1.28 !important;
+  letter-spacing: -.035em !important;
+}
+#bonus-section .bonus-card-description {
+  margin: 10px 0 0 !important;
+  color: #C1CBD8 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+}
+
+#bonus-section .bonus-progress-track {
+  position: relative;
+  width: 100%;
+  height: 7px;
+  margin: 13px auto 0;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #DDE4ED;
+}
+#bonus-section .bonus-progress-track span {
+  display: block;
+  height: 100%;
+  min-width: 16%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #087DB9 0%, #58B0DA 100%);
+  transition: width .12s linear;
+}
+
+@media (max-width: 420px) {
+  #bonus-section {
+    padding: 34px 0 38px !important;
+  }
+  #bonus-section > div > .bonus-heading {
+    padding: 0 12px;
+  }
+  #bonus-section .bonus-title {
+    font-size: clamp(2.3rem, 9.3vw, 2.9rem) !important;
+  }
+  #bonus-section .bonus-swipe-hint {
+    gap: 8px;
+    margin-top: 16px !important;
+    margin-bottom: 18px !important;
+    font-size: 10px !important;
+  }
+  #bonus-section .bonus-carousel-viewport {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  #bonus-section .bonus-carousel-track {
+    gap: 17px;
+  }
+  #bonus-section .bonus-carousel-track .bonus-card {
+    width: min(82vw, 316px) !important;
+    min-height: 500px;
+    border-radius: 20px !important;
+  }
+  #bonus-section .bonus-card-image {
+    width: calc(100% - 30px) !important;
+    margin-top: 15px !important;
+  }
+  #bonus-section .bonus-card-copy {
+    padding: 15px 15px 18px !important;
+  }
+  #bonus-section .bonus-card-copy h3 {
+    font-size: 16px !important;
+  }
+}
