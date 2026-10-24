@@ -132,7 +132,7 @@ function Bonuses(){
                 <img src={img(source, 640)} alt={title} width={640} height={640} loading="lazy" decoding="async"/>
               </div>
               <div className="bonus-card-copy">
-                <p className="bonus-card-index">MATERIAL {String(index + 1).padStart(2, '0')}</p>
+                
                 <h3>{title}</h3>
                 <p className="bonus-card-description">{index === 0 ? 'Não fique apenas lendo. Teste seus conhecimentos e descubra quais conteúdos ainda precisam de mais atenção.' : 'Um recurso extra para revisar conceitos, comparar informações e estudar com mais clareza.'}</p>
               </div>
