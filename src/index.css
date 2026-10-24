@@ -1270,3 +1270,35 @@ footer {
 #ofertas .pricing-card:nth-child(2) li svg {
   color: #79C8F4 !important;
 }
+
+
+/* Botões de compra dos dois planos: verde vivo com brilho suave. */
+@keyframes pricing-green-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 1px rgba(94, 255, 150, .34), 0 0 13px rgba(0, 230, 87, .36), 0 8px 20px rgba(0, 173, 70, .25) !important;
+  }
+  50% {
+    box-shadow: 0 0 0 2px rgba(94, 255, 150, .46), 0 0 22px rgba(0, 255, 96, .56), 0 10px 26px rgba(0, 173, 70, .32) !important;
+  }
+}
+
+#ofertas .pricing-card a {
+  background: linear-gradient(115deg, #39F477 0%, #00D957 48%, #00BD4B 100%) !important;
+  color: #052B16 !important;
+  border: 1px solid rgba(106, 255, 162, .8) !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .14);
+  box-shadow: 0 0 0 1px rgba(94, 255, 150, .34), 0 0 16px rgba(0, 230, 87, .42), 0 8px 22px rgba(0, 173, 70, .28) !important;
+  animation: pricing-green-glow 1.8s ease-in-out infinite;
+}
+
+#ofertas .pricing-card a:hover {
+  background: linear-gradient(115deg, #5CFF91 0%, #19EC6B 48%, #00D957 100%) !important;
+  color: #032411 !important;
+  box-shadow: 0 0 0 2px rgba(94, 255, 150, .5), 0 0 25px rgba(0, 255, 96, .6), 0 10px 26px rgba(0, 173, 70, .34) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #ofertas .pricing-card a {
+    animation: none;
+  }
+}
