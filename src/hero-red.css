@@ -730,3 +730,12 @@
     gap: 4px !important;
   }
 }
+
+
+/* Tipografia global da página: Sans Serif em todos os textos e componentes. */
+html,
+body,
+#root,
+#root * {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
