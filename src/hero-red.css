@@ -664,3 +664,69 @@
     gap: .08em;
   }
 }
+
+
+/* Ajuste definitivo do título dos bônus em telas de iPhone: evita que a segunda linha fique larga ou pareça deslocada. */
+#bonus-section .bonus-heading {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#bonus-section .bonus-title {
+  display: flex !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.045em !important;
+  overflow-wrap: normal;
+}
+
+#bonus-section .bonus-title .bonus-title-line {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  white-space: normal !important;
+}
+
+#bonus-section .bonus-title .bonus-title-highlight {
+  display: inline !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+}
+
+@media (max-width: 640px) {
+  #bonus-section .bonus-title {
+    font-size: clamp(1.75rem, 7vw, 2.35rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -.045em !important;
+    gap: 5px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  #bonus-section .bonus-heading {
+    padding: 0 !important;
+  }
+  #bonus-section .bonus-title {
+    font-size: 28px !important;
+    line-height: 1.14 !important;
+    letter-spacing: -.05em !important;
+    gap: 4px !important;
+  }
+}
