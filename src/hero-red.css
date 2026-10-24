@@ -168,3 +168,25 @@
     letter-spacing: .035em;
   }
 }
+
+
+/* Mobile: ampliar visualmente o mockup da Hero sem alterar a proporção da arte. */
+@media (max-width: 640px) {
+  #hero-section .hero-mockup-link {
+    width: calc(100% - 4px) !important;
+    max-width: none !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  #hero-section .hero-mockup-link img {
+    width: 100% !important;
+    max-width: none !important;
+    transform: scale(1.15);
+    transform-origin: center center;
+  }
+
+  #hero-section .hero-mockup-link + p {
+    margin-top: 18px !important;
+  }
+}
