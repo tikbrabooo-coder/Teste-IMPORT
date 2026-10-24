@@ -1,26 +1,107 @@
-/* Hero no estilo do print: fundo navy, grade sutil e headline azul-ciano. */
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+/* Headline de Metacognição — composição seguindo o print enviado. */
 #hero-section {
   background-color: #071329 !important;
   background-image:
-    linear-gradient(rgba(68, 143, 190, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(68, 143, 190, 0.055) 1px, transparent 1px),
+    linear-gradient(rgba(67, 142, 190, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(67, 142, 190, 0.055) 1px, transparent 1px),
     radial-gradient(ellipse at 50% 35%, rgba(22, 111, 169, 0.18), transparent 68%) !important;
   background-size: 42px 42px, 42px 42px, auto !important;
   color: #f8fafc !important;
 }
-#hero-section h1 {
-  color: #65b8e5 !important;
-  text-shadow: 0 0 26px rgba(31, 151, 212, 0.12);
+
+#hero-section h1.metacognition-headline {
+  display: block;
+  max-width: 1100px;
+  margin-inline: auto;
+  color: #67b9e5 !important;
+  font-size: clamp(2.65rem, 8.1vw, 7.1rem);
+  font-weight: 900;
+  line-height: .84;
+  letter-spacing: -.065em;
+  text-align: center;
+  text-shadow: 0 0 26px rgba(31, 151, 212, .12);
 }
-#hero-section h1 span {
-  background-image: linear-gradient(100deg, #9bdcff 0%, #4aa9dc 52%, #087db9 100%);
+
+#hero-section h1.metacognition-headline .headline-main {
+  display: block;
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 950;
+  line-height: .84;
+  letter-spacing: -.065em;
+  background: linear-gradient(100deg, #9bdcff 0%, #65b5df 46%, #087db9 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
 }
+
+#hero-section h1.metacognition-headline .headline-line-one {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: .15em;
+}
+
+#hero-section h1.metacognition-headline .headline-number {
+  font-size: 1.08em;
+  letter-spacing: -.075em;
+}
+
+#hero-section h1.metacognition-headline .headline-line-two {
+  margin-top: .045em;
+}
+
+#hero-section h1.metacognition-headline .headline-script {
+  display: block;
+  margin-top: .12em;
+  font-family: 'Parisienne', 'Brush Script MT', cursive !important;
+  font-size: clamp(2rem, 5.5vw, 3.9rem);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -.018em;
+  white-space: nowrap;
+  color: #fffaf1 !important;
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  -webkit-text-fill-color: #fffaf1 !important;
+  text-shadow: none !important;
+}
+
 #hero-section p {
   color: #c4d4e6 !important;
 }
 #hero-section .text-slate-500 {
   color: #b4c5d8 !important;
+}
+
+@media (max-width: 640px) {
+  #hero-section h1.metacognition-headline {
+    font-size: clamp(2.3rem, 10.7vw, 4.3rem);
+    letter-spacing: -.07em;
+  }
+  #hero-section h1.metacognition-headline .headline-main {
+    letter-spacing: -.07em;
+  }
+  #hero-section h1.metacognition-headline .headline-number {
+    letter-spacing: -.08em;
+  }
+  #hero-section h1.metacognition-headline .headline-script {
+    font-size: clamp(1.8rem, 7.7vw, 2.9rem);
+    letter-spacing: -.025em;
+  }
+}
+
+@media (max-width: 360px) {
+  #hero-section h1.metacognition-headline {
+    font-size: 2.08rem;
+  }
+  #hero-section h1.metacognition-headline .headline-script {
+    font-size: 1.63rem;
+  }
 }
