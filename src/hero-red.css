@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&display=swap');
 
 /* Headline de Metacognição — composição seguindo o print enviado. */
 #hero-section {
@@ -58,12 +58,12 @@
 #hero-section h1.metacognition-headline .headline-script {
   display: block;
   margin-top: .12em;
-  font-family: 'Parisienne', 'Brush Script MT', cursive !important;
-  font-size: clamp(2rem, 5.5vw, 3.9rem);
+  font-family: 'Bodoni Moda', 'Times New Roman', serif !important;
+  font-size: clamp(2rem, 5.3vw, 3.8rem);
   font-weight: 400;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: -.018em;
+  font-style: italic;
+  line-height: .98;
+  letter-spacing: -.025em;
   white-space: nowrap;
   color: #fffaf1 !important;
   background: none !important;
@@ -92,8 +92,8 @@
     letter-spacing: -.08em;
   }
   #hero-section h1.metacognition-headline .headline-script {
-    font-size: clamp(1.8rem, 7.7vw, 2.9rem);
-    letter-spacing: -.025em;
+    font-size: clamp(1.8rem, 7.4vw, 2.85rem);
+    letter-spacing: -.035em;
   }
 }
 
