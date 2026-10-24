@@ -739,3 +739,9 @@ body,
 #root * {
   font-family: Arial, Helvetica, sans-serif !important;
 }
+
+
+/* Override explícito da única headline serifada para cumprir Sans Serif na página toda. */
+#hero-section h1.metacognition-headline .headline-script {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
