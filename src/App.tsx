@@ -6,10 +6,7 @@ const ASSET = 'https://rainbow-brioche-d5ce72.netlify.app/images/';
 const HERO_SOURCE = 'https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Mapas%20de%20Metacogni%C3%A7%C3%A3o%20Infogr%C3%A1fica.png';
 const optimizeImage = (source: string, width: number, quality: 60 | 70 | 75 = 70) =>
   `/_vercel/image?url=${encodeURIComponent(source)}&w=${width}&q=${quality}`;
-const HERO_MOCKUP = optimizeImage(HERO_SOURCE, 1536, 70);
-const HERO_SRCSET = [640, 768, 1024, 1280, 1536]
-  .map((width) => `${optimizeImage(HERO_SOURCE, width, 70)} ${width}w`)
-  .join(', ');
+const HERO_MOCKUP = HERO_SOURCE;
 const img = (name: string, width = 768) => optimizeImage(ASSET + encodeURIComponent(name), width, 70);
 const CHECKOUTS = { ESSENCIAL: 'https://app.zuptos.com.br/checkout/597422a2be19f26c', COMPLETO: 'https://app.zuptos.com.br/checkout/dc9508e2442481d9', UPSELL: 'https://app.zuptos.com.br/checkout/40d7bf7e99b9c963' };
 
@@ -39,7 +36,7 @@ function Hero(){return <><aside className="hero-offer-banner w-full bg-[#E53935]
   <span className="headline-main headline-line-one"><span className="headline-number">+150</span><span>Mapas</span></span>
   <span className="headline-main headline-line-two">Mentais</span>
   <span className="headline-script">de Metacognição</span>
-</h1><a href="#ofertas" className="hero-mockup-link mx-auto mt-2 block w-full max-w-[1040px] sm:mt-5"><img src={HERO_MOCKUP} srcSet={HERO_SRCSET} sizes="(max-width: 672px) 100vw, 672px" alt="Mockup +150 Mapas de Metacognição" width={1024} height={1024} fetchPriority="high" loading="eager" decoding="async" className="mx-auto aspect-square h-auto w-full object-contain"/></a><p className="mx-auto mt-7 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-xl">Revise os principais conceitos da Ciência da Computação de forma visual, organizada e sem se perder em conteúdos extensos.</p><div className="hero-trust-row"><ShieldCheck className="h-4 w-4 shrink-0 text-emerald-500"/><p>Acesso imediato <span>•</span> Pagamento único <span>•</span> Garantia de 7 dias</p></div><div className="mx-auto mt-5 max-w-xl"><Button href="#ofertas">QUERO ACESSAR OS +150 MAPAS AGORA</Button></div></div></section></>}
+</h1><a href="#ofertas" className="hero-mockup-link mx-auto mt-2 block w-full max-w-[1040px] sm:mt-5"><img src={HERO_MOCKUP} sizes="(max-width: 672px) 100vw, 672px" alt="Mockup +150 Mapas de Metacognição" width={1024} height={1024} fetchPriority="high" loading="eager" decoding="async" className="mx-auto aspect-square h-auto w-full object-contain"/></a><p className="mx-auto mt-7 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-xl">Revise os principais conceitos da Ciência da Computação de forma visual, organizada e sem se perder em conteúdos extensos.</p><div className="hero-trust-row"><ShieldCheck className="h-4 w-4 shrink-0 text-emerald-500"/><p>Acesso imediato <span>•</span> Pagamento único <span>•</span> Garantia de 7 dias</p></div><div className="mx-auto mt-5 max-w-xl"><Button href="#ofertas">QUERO ACESSAR OS +150 MAPAS AGORA</Button></div></div></section></>}
 function MapsSection(){
   const renderCards = (clone = false) => maps.map(([title, source]) => (
     <article key={`${title}-${clone ? 'clone' : 'original'}`} className="carousel-card aspect-[16/10] w-[92vw] max-w-[760px] shrink-0 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl sm:w-[72vw] lg:w-[60vw]">
