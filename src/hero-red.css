@@ -257,3 +257,12 @@
     height: 15px;
   }
 }
+
+
+/* Integra a faixa de confiança ao fundo da Hero, sem bloco azul destacado. */
+#hero-section .hero-assurance-strip {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
