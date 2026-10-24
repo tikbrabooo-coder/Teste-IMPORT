@@ -1,0 +1,21 @@
+/* Apenas a faixa superior de oferta deve ficar vermelha. */
+#hero-section {
+  background: #F0F4FA !important;
+  color: #1e293b !important;
+}
+
+#hero-section h1 {
+  color: #0f172a !important;
+}
+
+#hero-section .hero-accent {
+  color: #2563eb !important;
+}
+
+#hero-section p {
+  color: #475569 !important;
+}
+
+#hero-section .text-slate-500 {
+  color: #64748b !important;
+}
