@@ -1354,3 +1354,16 @@ footer {
 #ofertas .pricing-card a:hover svg {
   color: #FFFFFF !important;
 }
+
+
+/* Leve aumento nos preços atuais para melhorar a leitura nos dois cards. */
+#ofertas .pricing-card .pricing-price-current {
+  font-size: 44px !important;
+  line-height: 1.06 !important;
+}
+
+@media (max-width: 700px) {
+  #ofertas .pricing-card .pricing-price-current {
+    font-size: 39px !important;
+  }
+}
