@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { ArrowDown, ArrowRight, Check, ChevronDown, Clock, ShieldCheck, Sparkles, Star, X } from 'lucide-react';
 
 const ASSET = 'https://rainbow-brioche-d5ce72.netlify.app/images/';
-const HERO_SOURCE = 'https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Computer%20Science%20Mind%20Maps%20Study%20Pack.png';
+const HERO_SOURCE = 'https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Mapas%20de%20Metacogni%C3%A7%C3%A3o%20Infogr%C3%A1fica.png';
 const optimizeImage = (source: string, width: number, quality: 60 | 70 | 75 = 70) =>
   `/_vercel/image?url=${encodeURIComponent(source)}&w=${width}&q=${quality}`;
 const HERO_MOCKUP = optimizeImage(HERO_SOURCE, 1024, 70);
@@ -39,7 +39,7 @@ function Hero(){return <><aside className="w-full bg-[#E53935] px-3 py-2 text-ce
   <span className="headline-main headline-line-one"><span className="headline-number">+150</span><span>Mapas</span></span>
   <span className="headline-main headline-line-two">Mentais</span>
   <span className="headline-script">de Metacognição</span>
-</h1><a href="#ofertas" className="mx-auto mt-2 block w-full max-w-[720px] sm:mt-5"><img src={HERO_MOCKUP} srcSet={HERO_SRCSET} sizes="(max-width: 672px) 100vw, 672px" alt="Mockup +150 Mapas Mentais de Ciência da Computação" width={1024} height={1024} fetchPriority="high" loading="eager" decoding="async" className="mx-auto aspect-square h-auto w-full object-contain"/></a><p className="mx-auto mt-7 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-xl">Revise os principais conceitos da Ciência da Computação de forma visual, organizada e sem se perder em conteúdos extensos.</p><div className="hero-trust-row"><ShieldCheck className="h-4 w-4 shrink-0 text-emerald-500"/><p>Acesso imediato <span>•</span> Pagamento único <span>•</span> Garantia de 7 dias</p></div><div className="mx-auto mt-5 max-w-xl"><Button href="#ofertas">QUERO ACESSAR OS +150 MAPAS AGORA</Button></div></div></section></>}
+</h1><a href="#ofertas" className="mx-auto mt-2 block w-full max-w-[720px] sm:mt-5"><img src={HERO_MOCKUP} srcSet={HERO_SRCSET} sizes="(max-width: 672px) 100vw, 672px" alt="Mockup +150 Mapas de Metacognição" width={1024} height={1024} fetchPriority="high" loading="eager" decoding="async" className="mx-auto aspect-square h-auto w-full object-contain"/></a><p className="mx-auto mt-7 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-xl">Revise os principais conceitos da Ciência da Computação de forma visual, organizada e sem se perder em conteúdos extensos.</p><div className="hero-trust-row"><ShieldCheck className="h-4 w-4 shrink-0 text-emerald-500"/><p>Acesso imediato <span>•</span> Pagamento único <span>•</span> Garantia de 7 dias</p></div><div className="mx-auto mt-5 max-w-xl"><Button href="#ofertas">QUERO ACESSAR OS +150 MAPAS AGORA</Button></div></div></section></>}
 function MapsSection(){
   const renderCards = (clone = false) => maps.map(([title, source]) => (
     <article key={`${title}-${clone ? 'clone' : 'original'}`} className="carousel-card aspect-[16/10] w-[92vw] max-w-[760px] shrink-0 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl sm:w-[72vw] lg:w-[60vw]">
