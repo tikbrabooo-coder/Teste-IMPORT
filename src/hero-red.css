@@ -419,10 +419,15 @@
 }
 
 
-/* Bônus: composição editorial da referência enviada, com rolagem manual por toque. */
+/* Bônus: mesmo fundo da Hero, com grade sutil e degradê azul-marinho. */
 #bonus-section {
-  background: #030916 !important;
-  background-image: none !important;
+  background-color: #030914 !important;
+  background-image:
+    linear-gradient(rgba(80, 133, 174, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 133, 174, .045) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 34%, rgba(32, 93, 143, .22), transparent 66%),
+    linear-gradient(115deg, #101f30 0%, #071326 48%, #030817 100%) !important;
+  background-size: 42px 42px, 42px 42px, auto, auto !important;
   border-color: rgba(84, 132, 184, .12) !important;
   padding-top: 46px !important;
   padding-bottom: 42px !important;
