@@ -190,3 +190,70 @@
     margin-top: 18px !important;
   }
 }
+
+
+/* Garantias da oferta: faixa azul com três benefícios logo abaixo do CTA da Hero. */
+#hero-section .hero-assurance-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 8px;
+  width: min(100%, 560px);
+  margin: 16px auto 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(151, 188, 246, .24);
+  border-radius: 8px;
+  background: linear-gradient(105deg, #193c78 0%, #244d91 52%, #17386e 100%);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .08);
+}
+
+#hero-section .hero-assurance-item {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: left;
+}
+
+#hero-section .hero-assurance-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  stroke-width: 2.5;
+}
+
+#hero-section .hero-assurance-shield {
+  color: #FFDDD8;
+  fill: rgba(229, 57, 53, .28);
+}
+#hero-section .hero-assurance-trophy {
+  color: #FFD34F;
+  fill: rgba(255, 211, 79, .16);
+}
+#hero-section .hero-assurance-lock {
+  color: #FFE08A;
+}
+
+@media (max-width: 420px) {
+  #hero-section .hero-assurance-strip {
+    gap: 4px;
+    margin-top: 13px;
+    padding: 10px 6px;
+    border-radius: 7px;
+  }
+  #hero-section .hero-assurance-item {
+    gap: 5px;
+    font-size: 9px;
+    line-height: 1.12;
+  }
+  #hero-section .hero-assurance-icon {
+    width: 15px;
+    height: 15px;
+  }
+}
