@@ -109,34 +109,39 @@ function PainSolutions(){
 }
 
 function Bonuses(){
-  const renderBonusCards = (clone = false) => bonuses.map(([title,source]) => (
-    <article key={`${title}-${clone ? 'clone' : 'original'}`} className="bonus-card shrink-0 overflow-hidden rounded-3xl bg-white">
-      <div className="bonus-card-image mx-auto mt-3 aspect-square w-[92%] overflow-hidden rounded-2xl bg-slate-50">
-        <img src={img(source, 640)} alt={title} width={640} height={640} className="h-full w-full object-contain" loading="lazy" decoding="async" fetchPriority="low"/>
-      </div>
-      <div className="bonus-card-copy p-4 pt-3 sm:p-4">
-        <p className="text-base font-black leading-snug">{title}</p>
-        <p className="mt-1.5 text-sm leading-relaxed">Material extra para consulta e revisão rápida.</p>
-      </div>
-    </article>
-  ));
+  const [bonusProgress, setBonusProgress] = useState(0);
+
+  const handleBonusScroll = (event: React.UIEvent<HTMLDivElement>) => {
+    const element = event.currentTarget;
+    const maxScroll = element.scrollWidth - element.clientWidth;
+    setBonusProgress(maxScroll > 0 ? (element.scrollLeft / maxScroll) * 100 : 0);
+  };
 
   return <section id="bonus-section" className="perf-section px-4 py-12 sm:py-16">
     <div className="mx-auto max-w-6xl">
-      <div className="mb-8 text-center">
-        <p className="section-kicker section-kicker-centered"><Sparkles className="h-4 w-4"/>MATERIAIS COMPLEMENTARES</p>
-        <h2 className="text-2xl font-black sm:text-4xl">BÔNUS EXCLUSIVOS</h2>
-        <p className="mt-3 text-base sm:text-lg">Recursos extras para consultar e revisar os principais temas.</p>
+      <div className="bonus-heading mb-7 text-center">
+        <h2 className="bonus-title">E você ainda<br/>recebe <span>5 BÔNUS</span></h2>
+        <p className="bonus-swipe-hint"><span aria-hidden="true">←</span> DESLIZE PARA O LADO PARA VER MAIS <span aria-hidden="true">→</span></p>
       </div>
-      <div className="bonus-auto-viewport py-4" aria-label="Carrossel automático dos bônus">
-        <div className="bonus-auto-track">
-          <div className="bonus-auto-group">
-            {renderBonusCards()}
-          </div>
-          <div className="bonus-auto-group" aria-hidden="true">
-            {renderBonusCards(true)}
-          </div>
+
+      <div className="bonus-carousel-viewport" aria-label="Carrossel de cinco bônus" onScroll={handleBonusScroll}>
+        <div className="bonus-carousel-track">
+          {bonuses.map(([title,source], index) => (
+            <article key={title} className="bonus-card">
+              <div className="bonus-card-image">
+                <img src={img(source, 640)} alt={title} width={640} height={640} loading="lazy" decoding="async"/>
+              </div>
+              <div className="bonus-card-copy">
+                <p className="bonus-card-index">MATERIAL {String(index + 1).padStart(2, '0')}</p>
+                <h3>{title}</h3>
+                <p className="bonus-card-description">{index === 0 ? 'Não fique apenas lendo. Teste seus conhecimentos e descubra quais conteúdos ainda precisam de mais atenção.' : 'Um recurso extra para revisar conceitos, comparar informações e estudar com mais clareza.'}</p>
+              </div>
+            </article>
+          ))}
         </div>
+      </div>
+      <div className="bonus-progress-track" role="progressbar" aria-label="Progresso do carrossel de bônus" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(bonusProgress)}>
+        <span style={{width: `${Math.max(16, bonusProgress)}%`}}/>
       </div>
     </div>
   </section>;
