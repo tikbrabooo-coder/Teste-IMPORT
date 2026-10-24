@@ -1367,3 +1367,30 @@ footer {
     font-size: 39px !important;
   }
 }
+
+
+/* Texto curto de comparação de valor, exclusivo do card Premium. */
+#ofertas .pricing-card .premium-value-note {
+  margin: 10px auto 0 !important;
+  max-width: 360px;
+  color: #D2DFEE !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+}
+
+#ofertas .pricing-card .premium-value-note span {
+  color: #69BFFF !important;
+  font-weight: 850 !important;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  #ofertas .pricing-card .premium-value-note {
+    margin-top: 9px !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+}
