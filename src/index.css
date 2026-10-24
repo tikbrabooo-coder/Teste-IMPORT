@@ -1394,3 +1394,60 @@ footer {
     line-height: 1.45 !important;
   }
 }
+
+
+/* Tipografia unificada em Sans Serif em todo o conteúdo dos cards de oferta. */
+#ofertas .pricing-card,
+#ofertas .pricing-card h3,
+#ofertas .pricing-card p,
+#ofertas .pricing-card li,
+#ofertas .pricing-card span,
+#ofertas .pricing-card a {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* Garante que a explicação de valor apareça logo abaixo do preço Premium. */
+#ofertas .pricing-card .premium-value-note-wrap {
+  display: block !important;
+  width: 100% !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin: 10px auto 0 !important;
+  position: relative;
+  z-index: 1;
+}
+
+#ofertas .pricing-card .premium-value-note {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  max-width: 360px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  color: #D2DFEE !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+  letter-spacing: 0 !important;
+}
+
+#ofertas .pricing-card .premium-value-note span {
+  color: #69BFFF !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 800 !important;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  #ofertas .pricing-card .premium-value-note-wrap {
+    margin-top: 9px !important;
+  }
+
+  #ofertas .pricing-card .premium-value-note {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+}
