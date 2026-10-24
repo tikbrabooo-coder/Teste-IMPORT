@@ -1239,3 +1239,34 @@ footer {
   border-top: 1px solid #E5EAF1 !important;
   border-bottom: 1px solid #E5EAF1 !important;
 }
+
+
+/* Plano Completo/Premium: fundo azul-escuro com contraste legível. */
+#ofertas .pricing-card:nth-child(2) {
+  background: linear-gradient(145deg, #07172B 0%, #102B4A 100%) !important;
+  border-color: #274B70 !important;
+  box-shadow: 0 16px 36px rgba(3, 15, 31, .22) !important;
+  color: #F8FAFC !important;
+}
+
+#ofertas .pricing-card:nth-child(2) h3,
+#ofertas .pricing-card:nth-child(2) li,
+#ofertas .pricing-card:nth-child(2) .text-3xl {
+  color: #F8FAFC !important;
+}
+
+#ofertas .pricing-card:nth-child(2) .text-xs.font-semibold {
+  color: #C0D0E2 !important;
+}
+
+#ofertas .pricing-card:nth-child(2) .text-blue-700 {
+  color: #8DD5FF !important;
+}
+
+#ofertas .pricing-card:nth-child(2) .border-t {
+  border-color: rgba(177, 202, 229, .2) !important;
+}
+
+#ofertas .pricing-card:nth-child(2) li svg {
+  color: #79C8F4 !important;
+}
