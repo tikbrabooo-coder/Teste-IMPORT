@@ -1343,3 +1343,14 @@ footer {
     font-size: 36px !important;
   }
 }
+
+
+/* Texto dos botões verdes da seção de oferta em branco. */
+#ofertas .pricing-card a,
+#ofertas .pricing-card a span,
+#ofertas .pricing-card a svg,
+#ofertas .pricing-card a:hover,
+#ofertas .pricing-card a:hover span,
+#ofertas .pricing-card a:hover svg {
+  color: #FFFFFF !important;
+}
