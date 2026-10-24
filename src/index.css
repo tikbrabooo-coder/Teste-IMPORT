@@ -1302,3 +1302,44 @@ footer {
     animation: none;
   }
 }
+
+
+/* Preços dos planos: apresentação limpa, valor original vermelho e preço atual com destaque discreto. */
+#ofertas .pricing-card .pricing-price-original {
+  margin: 0 0 5px !important;
+  color: #E04444 !important;
+  font-size: 16px !important;
+  font-weight: 650 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+  text-decoration: line-through !important;
+  text-decoration-color: #E04444 !important;
+  text-decoration-thickness: 1.5px !important;
+}
+
+#ofertas .pricing-card .pricing-price-current {
+  margin: 0 !important;
+  font-size: 40px !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.035em !important;
+  text-shadow: none !important;
+}
+
+#ofertas .pricing-card .pricing-price-essential {
+  color: #111827 !important;
+}
+
+#ofertas .pricing-card .pricing-price-premium {
+  color: #69BFFF !important;
+}
+
+@media (max-width: 700px) {
+  #ofertas .pricing-card .pricing-price-original {
+    font-size: 15px !important;
+    margin-bottom: 5px !important;
+  }
+  #ofertas .pricing-card .pricing-price-current {
+    font-size: 36px !important;
+  }
+}
