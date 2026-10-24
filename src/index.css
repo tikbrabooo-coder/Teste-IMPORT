@@ -1223,3 +1223,11 @@ footer {
 #mapas-preview {
   background: #F4F7FB !important;
 }
+
+
+/* Fundo bege solicitado para a seção de oferta. */
+#ofertas {
+  background: linear-gradient(180deg, #F7F0E4 0%, #EFE2CF 100%) !important;
+  border-top: 1px solid #E3D4BE !important;
+  border-bottom: 1px solid #E3D4BE !important;
+}
