@@ -1,21 +1,26 @@
-/* Apenas a faixa superior de oferta deve ficar vermelha. */
+/* Hero no estilo do print: fundo navy, grade sutil e headline azul-ciano. */
 #hero-section {
-  background: #F0F4FA !important;
-  color: #1e293b !important;
+  background-color: #071329 !important;
+  background-image:
+    linear-gradient(rgba(68, 143, 190, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(68, 143, 190, 0.055) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 35%, rgba(22, 111, 169, 0.18), transparent 68%) !important;
+  background-size: 42px 42px, 42px 42px, auto !important;
+  color: #f8fafc !important;
 }
-
 #hero-section h1 {
-  color: #0f172a !important;
+  color: #65b8e5 !important;
+  text-shadow: 0 0 26px rgba(31, 151, 212, 0.12);
 }
-
-#hero-section .hero-accent {
-  color: #2563eb !important;
+#hero-section h1 span {
+  background-image: linear-gradient(100deg, #9bdcff 0%, #4aa9dc 52%, #087db9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
 #hero-section p {
-  color: #475569 !important;
+  color: #c4d4e6 !important;
 }
-
 #hero-section .text-slate-500 {
-  color: #64748b !important;
+  color: #b4c5d8 !important;
 }
