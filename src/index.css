@@ -1544,3 +1544,26 @@ footer {
     text-align: center !important;
   }
 }
+
+/* Tiles de bônus com ícones cognitivos, sem ilustrações do tema anterior. */
+#bonus-section .bonus-card-icon {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(145deg, #EFF6FF 0%, #F5F3FF 100%) !important;
+  color: #2563EB !important;
+}
+#bonus-section .bonus-card-number {
+  color: #315D9B !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  letter-spacing: .18em !important;
+}
+#bonus-section .bonus-card-label {
+  color: #64748B !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  letter-spacing: .2em !important;
+}
