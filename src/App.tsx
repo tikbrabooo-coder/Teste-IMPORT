@@ -190,7 +190,7 @@ function FAQ(){
   ];
   return <section id="faq" className="bg-[#F3F7FC] px-4 py-12 sm:py-16">
     <div className="mx-auto max-w-3xl">
-      <h2 className="text-center text-3xl font-black text-slate-900 sm:text-4xl">PERGUNTAS <span className="heading-accent-purple">FREQUENTES</span></h2>
+      <h2 className="faq-heading">Perguntas<br/><span>frequentes</span></h2>
       <div className="mx-auto mt-8 max-w-2xl border-t border-slate-300">
         {items.map((item,i)=><div key={item.question} className="faq-row border-b border-slate-300">
           <button type="button" onClick={()=>setOpen(open===i?null:i)} className="faq-question relative flex w-full items-start justify-between gap-4 py-5 pr-9 pl-0 text-left font-extrabold text-slate-900" aria-expanded={open===i}>
