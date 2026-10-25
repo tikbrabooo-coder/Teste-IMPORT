@@ -1761,3 +1761,15 @@ footer {
 #faq {
   background: #F8FAFD !important;
 }
+
+
+/* Center the two-line FAQ heading within its section. */
+#faq .faq-heading {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+#faq .faq-heading span {
+  text-align: center !important;
+}
