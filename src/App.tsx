@@ -41,7 +41,7 @@ function Hero(){return <><aside className="hero-offer-banner w-full bg-[#E53935]
   <span className="headline-main headline-line-one"><span className="headline-number">+150</span><span>Mapas</span></span>
   <span className="headline-main headline-line-two">Mentais</span>
   <span className="headline-script">de Metacognição</span>
-</h1><a href="#ofertas" className="hero-mockup-link mx-auto mt-2 block w-full max-w-[1040px] sm:mt-5"><img src={HERO_MOCKUP} sizes="(max-width: 672px) 100vw, 672px" alt="Mockup +150 Mapas de Metacognição" width={1024} height={1024} fetchPriority="high" loading="eager" decoding="async" className="mx-auto aspect-square h-auto w-full object-contain"/></a><p className="mx-auto mt-7 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-xl">Entenda seus padrões de pensamento, reconheça hábitos automáticos e aprenda a tomar decisões mais conscientes com mapas mentais visuais e fáceis de revisar.</p><div className="mx-auto mt-5 max-w-xl"><Button href="#ofertas">QUERO ACESSAR OS +150 MAPAS AGORA</Button></div><div className="hero-assurance-strip" aria-label="Garantias da compra"><div className="hero-assurance-item"><ShieldCheck className="hero-assurance-icon hero-assurance-shield" aria-hidden="true"/><span>Compra<br/>Segura</span></div><div className="hero-assurance-item"><Trophy className="hero-assurance-icon hero-assurance-trophy" aria-hidden="true"/><span>Satisfação<br/>Garantida</span></div><div className="hero-assurance-item"><LockKeyhole className="hero-assurance-icon hero-assurance-lock" aria-hidden="true"/><span>Privacidade<br/>Protegida</span></div></div></div></section></>}
+</h1><a href="#ofertas" className="hero-mockup-link mx-auto mt-2 block w-full max-w-[1040px] sm:mt-5"><img src={HERO_MOCKUP} sizes="(max-width: 672px) 100vw, 672px" alt="Mockup +150 Mapas de Metacognição" width={1024} height={1024} fetchPriority="high" loading="eager" decoding="async" className="mx-auto aspect-square h-auto w-full object-contain"/></a><p className="mx-auto mt-7 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-xl">Entenda seus padrões de pensamento, reconheça hábitos automáticos e aprenda a tomar decisões mais conscientes com mapas mentais visuais e fáceis de revisar.</p><div className="mx-auto mt-5 max-w-xl"><Button href="https://mapasmentaisneuro.vercel.app/#oferta">QUERO MEUS MAPAS</Button></div><div className="hero-assurance-strip" aria-label="Garantias da compra"><div className="hero-assurance-item"><ShieldCheck className="hero-assurance-icon hero-assurance-shield" aria-hidden="true"/><span>Compra<br/>Segura</span></div><div className="hero-assurance-item"><Trophy className="hero-assurance-icon hero-assurance-trophy" aria-hidden="true"/><span>Satisfação<br/>Garantida</span></div><div className="hero-assurance-item"><LockKeyhole className="hero-assurance-icon hero-assurance-lock" aria-hidden="true"/><span>Privacidade<br/>Protegida</span></div></div></div></section></>}
 function MapsSection(){
   return <section id="mapas-preview" className="perf-section bg-[#F7FAFF] px-4 py-12 sm:py-16">
     <div className="mx-auto max-w-5xl">
@@ -157,7 +157,7 @@ function Pricing({onUpgrade}:{onUpgrade:()=>void}){
       {!complete&&<p className="pricing-subtitle mt-1 text-xs font-black uppercase tracking-wide">+150 MAPAS MENTAIS DE METACOGNIÇÃO</p>}
       {complete&&<img src={HERO_MOCKUP} alt="Plano Completo com +150 Mapas Mentais de Metacognição" width={1024} height={1024} className="mx-auto mt-5 w-full max-w-[330px] object-contain" loading="lazy" decoding="async" fetchPriority="low"/>}
       <ul className="mt-7 flex-1 space-y-3">
-        {features.map((feature,i)=><li key={feature} className="flex items-center gap-3 text-sm font-bold sm:text-base"><Check className="h-5 w-5 shrink-0 text-blue-600"/><span>{feature}</span>{complete&&i>0&&<span className="ml-auto shrink-0 rounded-md border border-blue-200 bg-blue-50 px-2 py-0.5 text-[11px] font-black text-blue-700">🎁 BÔNUS</span>}</li>)}
+        {features.map((feature,i)=><li key={feature} className="flex items-center gap-3 text-sm font-bold sm:text-base"><Check className="h-5 w-5 shrink-0 text-blue-600"/><span>{feature}</span></li>)}
       </ul>
       <div className="mt-8 border-t border-slate-100 pt-6 text-center">
         <p className="pricing-price-original">{complete?'R$ 67,00':'R$ 37,00'}</p>
@@ -191,13 +191,14 @@ function FAQ(){
   return <section id="faq" className="bg-[#F3F7FC] px-4 py-12 sm:py-16">
     <div className="mx-auto max-w-3xl">
       <h2 className="text-center text-3xl font-black text-slate-900 sm:text-4xl">PERGUNTAS <span className="heading-accent-purple">FREQUENTES</span></h2>
-      <div className="mx-auto mt-8 max-w-2xl space-y-3">
-        {items.map((item,i)=><div key={item.question} className="faq-card overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-          <button type="button" onClick={()=>setOpen(open===i?null:i)} className="flex w-full items-center justify-between gap-4 p-5 text-left font-extrabold text-slate-900" aria-expanded={open===i}>
-            <span>{item.question}</span><ChevronDown className={'h-5 w-5 shrink-0 transition-transform ' + (open===i?'rotate-180':'')}/>
+      <div className="mx-auto mt-8 max-w-2xl border-t border-slate-300">
+        {items.map((item,i)=><div key={item.question} className="faq-row border-b border-slate-300">
+          <button type="button" onClick={()=>setOpen(open===i?null:i)} className="faq-question relative flex w-full items-start justify-between gap-4 py-5 pr-9 pl-0 text-left font-extrabold text-slate-900" aria-expanded={open===i}>
+            <span>{item.question}</span>
+            <span aria-hidden="true" className="faq-plus">{open===i?'−':'+'}</span>
           </button>
           <div className={'grid transition-all duration-300 ' + (open===i?'grid-rows-[1fr] opacity-100':'grid-rows-[0fr] opacity-0')}>
-            <div className="min-h-0 overflow-hidden px-5 pb-5 text-sm leading-relaxed text-slate-600">{item.answer}</div>
+            <div className="min-h-0 overflow-hidden pb-5 text-sm leading-relaxed text-slate-600">{item.answer}</div>
           </div>
         </div>)}
       </div>
