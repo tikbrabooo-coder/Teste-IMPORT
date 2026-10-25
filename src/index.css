@@ -1453,3 +1453,70 @@ footer {
 }
 
 /* Deployment trigger commit: keep offer-card typography and Premium value note current. */
+
+/* Ajuste pontual da garantia: fundo escuro, sem cartão ou texto complementar. */
+#garantia {
+  background: #050914 !important;
+  padding: 30px 16px 38px !important;
+}
+#garantia > div {
+  display: grid !important;
+  grid-template-columns: 220px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 28px !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  min-height: 0 !important;
+  margin: 0 auto !important;
+  padding: 8px 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-align: left !important;
+}
+#garantia > div > div:first-child {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+#garantia > div > div:first-child img {
+  display: block !important;
+  width: 200px !important;
+  height: 200px !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+}
+#garantia h2 {
+  margin: 0 !important;
+  color: #FFFFFF !important;
+  font-size: clamp(26px, 3.2vw, 38px) !important;
+  font-weight: 900 !important;
+  line-height: 1.14 !important;
+  letter-spacing: -0.025em !important;
+  text-transform: uppercase !important;
+}
+#garantia h2 span {
+  color: #78AFFF !important;
+}
+@media (max-width: 700px) {
+  #garantia {
+    padding: 26px 18px 30px !important;
+  }
+  #garantia > div {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 14px !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  #garantia > div > div:first-child img {
+    width: 164px !important;
+    height: 164px !important;
+  }
+  #garantia h2 {
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    font-size: clamp(23px, 6vw, 29px) !important;
+    text-align: center !important;
+  }
+}
