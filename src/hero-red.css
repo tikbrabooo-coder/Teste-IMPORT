@@ -808,3 +808,20 @@ body,
 #root #ofertas .pricing-card li > svg {
   color: #22C55E !important;
 }
+
+/* Card Premium: azul-marinho extremamente escuro com contraste preservado. */
+#root #ofertas .grid > .pricing-card:nth-child(2) {
+  background: linear-gradient(145deg, #020817 0%, #041126 55%, #061A31 100%) !important;
+  border-color: #142B46 !important;
+}
+
+/* Preços em destaque com Inter geométrica em peso Black (900). */
+#root #ofertas .pricing-card .pricing-price-current,
+#root #ofertas .pricing-card .pricing-price-premium {
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 900 !important;
+  font-variant-numeric: tabular-nums !important;
+  font-feature-settings: "tnum" 1 !important;
+  letter-spacing: -0.045em !important;
+}
