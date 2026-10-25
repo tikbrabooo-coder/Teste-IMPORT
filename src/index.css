@@ -1520,3 +1520,27 @@ footer {
     text-align: center !important;
   }
 }
+
+/* Texto complementar da garantia em cinza claro, abaixo do título. */
+#garantia .guarantee-description {
+  display: block !important;
+  margin: 16px 0 0 !important;
+  max-width: 680px !important;
+  color: #A7B0BF !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  text-align: left !important;
+  letter-spacing: 0 !important;
+}
+@media (max-width: 700px) {
+  #garantia .guarantee-description {
+    margin: 13px auto 0 !important;
+    max-width: 560px !important;
+    color: #A7B0BF !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    text-align: center !important;
+  }
+}
