@@ -1773,3 +1773,16 @@ footer {
 #faq .faq-heading span {
   text-align: center !important;
 }
+
+
+/* Fundo branco em todos os cards da seção Bônus, incluindo a área dos mockups. */
+#bonus-section .bonus-card,
+#bonus-section .bonus-card .bonus-card-copy,
+#bonus-section .bonus-card > div:last-child {
+  background: #FFFFFF !important;
+  background-image: none !important;
+}
+#bonus-section .bonus-card-image {
+  background: #FFFFFF !important;
+  background-image: none !important;
+}
