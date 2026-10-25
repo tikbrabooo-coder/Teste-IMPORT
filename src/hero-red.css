@@ -825,3 +825,114 @@ body,
   font-feature-settings: "tnum" 1 !important;
   letter-spacing: -0.045em !important;
 }
+
+/* Garantia simplificada: fundo preto/azul-marinho profundo, sem cartão branco nem borda. */
+#root #garantia {
+  background: linear-gradient(160deg, #000000 0%, #020817 48%, #031126 100%) !important;
+  border: 0 !important;
+  padding: 42px 16px 48px !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+}
+
+#root #garantia .guarantee-inner {
+  display: grid !important;
+  grid-template-columns: 240px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 34px !important;
+  max-width: 1024px !important;
+  min-height: 0 !important;
+  padding: 18px 12px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  color: #B8C2CF !important;
+  text-align: left !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+}
+
+#root #garantia .guarantee-seal {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#root #garantia .guarantee-seal img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 220px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#root #garantia .guarantee-copy {
+  min-width: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+}
+
+#root #garantia h2 {
+  margin: 0 !important;
+  color: #D1D5DB !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-size: clamp(25px, 3.1vw, 35px) !important;
+  font-style: normal !important;
+  font-weight: 900 !important;
+  line-height: 1.16 !important;
+  letter-spacing: -0.035em !important;
+  text-transform: uppercase !important;
+}
+
+#root #garantia h2 span {
+  color: #D1D5DB !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-weight: 900 !important;
+}
+
+#root #garantia .guarantee-copy p {
+  margin-top: 16px !important;
+  color: #AAB4C2 !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 1.7 !important;
+  letter-spacing: -0.01em !important;
+}
+
+@media (max-width: 700px) {
+  #root #garantia {
+    padding: 30px 16px 36px !important;
+  }
+
+  #root #garantia .guarantee-inner {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 14px !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  #root #garantia .guarantee-seal img {
+    max-width: 180px !important;
+  }
+
+  #root #garantia h2 {
+    font-size: clamp(23px, 6vw, 30px) !important;
+    line-height: 1.18 !important;
+  }
+
+  #root #garantia .guarantee-copy p {
+    margin-top: 12px !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    text-align: left !important;
+  }
+}
