@@ -936,3 +936,46 @@ body,
     text-align: left !important;
   }
 }
+
+/* Chamada de comparação: Inter Black azul-claro com movimento sutil. */
+#root #ofertas .pricing-promo-nudge {
+  color: #65D4FF !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.015em !important;
+  line-height: 1.35 !important;
+  text-shadow: 0 0 12px rgba(101, 212, 255, 0.18);
+  animation: promo-nudge-pulse 2.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+#root #ofertas .pricing-promo-nudge svg {
+  flex-shrink: 0;
+  color: #65D4FF !important;
+  animation: promo-arrow-bounce 1.2s ease-in-out infinite;
+}
+
+@keyframes promo-nudge-pulse {
+  0%, 100% {
+    transform: translateY(0);
+    text-shadow: 0 0 8px rgba(101, 212, 255, 0.15);
+  }
+  50% {
+    transform: translateY(-2px);
+    text-shadow: 0 0 16px rgba(101, 212, 255, 0.32);
+  }
+}
+
+@keyframes promo-arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root #ofertas .pricing-promo-nudge,
+  #root #ofertas .pricing-promo-nudge svg {
+    animation: none !important;
+    transform: none !important;
+  }
+}
