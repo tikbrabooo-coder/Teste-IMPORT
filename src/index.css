@@ -1783,3 +1783,40 @@ footer {
 #bonus-section .bonus-card-image img {
   background-color: #FFFFFF !important;
 }
+
+
+/* Garantia: força o selo a aparecer no espaço dedicado e aumenta a área de exibição. */
+#garantia > div.guarantee-inner {
+  grid-template-columns: 260px minmax(0, 1fr) !important;
+}
+#garantia > div > div:first-child {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  min-height: 240px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+#garantia > div > div:first-child img {
+  display: block !important;
+  width: 240px !important;
+  height: 240px !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+@media (max-width: 700px) {
+  #garantia > div.guarantee-inner {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  #garantia > div > div:first-child {
+    min-height: 0 !important;
+  }
+  #garantia > div > div:first-child img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
