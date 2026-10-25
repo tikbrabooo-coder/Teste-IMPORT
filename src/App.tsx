@@ -29,11 +29,11 @@ const checkoutHref = (checkoutUrl: string) => {
   return destination.toString();
 };
 const bonuses = [
-  {title:'Checklist de Autoavaliação Cognitiva',description:'Observe seus hábitos mentais e identifique padrões que merecem atenção.'},
-  {title:'30 Mapas para Destravar Decisões',description:'Organize possibilidades, compare caminhos e escolha com mais clareza.'},
-  {title:'Mapa dos Padrões de Pensamento',description:'Reconheça pensamentos recorrentes e reflita sobre como influenciam suas escolhas.'},
-  {title:'Kit de Clareza Mental e Organização de Ideias',description:'Estruture ideias e transforme pensamentos dispersos em um plano visual.'},
-  {title:'Manual para Questionar as Próprias Conclusões',description:'Use perguntas guiadas para examinar interpretações e conclusões com mais cuidado.'}
+  {title:'Checklist de Autoavaliação Cognitiva',description:'Observe seus hábitos mentais e identifique padrões que merecem atenção.',image:'https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Checklist%20de%20Autoavalia%C3%A7%C3%A3o%20Cognitiva.png'},
+  {title:'30 Mapas para Destravar Decisões',description:'Organize possibilidades, compare caminhos e escolha com mais clareza.',image:'https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/B%C3%B4nus_%2030%20Mapas%20para%20Destravar%20Decis%C3%B5es.png'},
+  {title:'Mapa dos Padrões de Pensamento',description:'Reconheça pensamentos recorrentes e reflita sobre como influenciam suas escolhas.',image:'https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/B%C3%B4nus%20Mapa%20dos%20Padr%C3%B5es%20de%20Pensamento.png'},
+  {title:'Kit de Clareza Mental e Organização de Ideias',description:'Estruture ideias e transforme pensamentos dispersos em um plano visual.',image:'https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Kit%20de%20Clareza%20Mental%20Neon.png'},
+  {title:'Manual para Questionar as Próprias Conclusões',description:'Use perguntas guiadas para examinar interpretações e conclusões com mais cuidado.',image:'https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Manual%20Para%20Questionar%20Conclus%C3%B5es.png'}
 ];
 const navigateToCheckout=(event:React.MouseEvent<HTMLAnchorElement>,checkoutUrl:string)=>{event.preventDefault();const link=event.currentTarget;if(link.dataset.checkoutPending==="true")return;link.dataset.checkoutPending="true";link.setAttribute('aria-busy','true');window.setTimeout(()=>window.location.assign(checkoutUrl),300)};
 const Button=({href,children,muted=false,onClick}:{href?:string;children:React.ReactNode;muted?:boolean;onClick?:()=>void})=>{const isCheckout=Boolean(href&&(href.includes('payfast.greenn.com.br/redirect/')||href.includes('app.zuptos.com.br/checkout/')));const className=`inline-flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-4 text-center font-extrabold uppercase transition ${isCheckout?'go-to-checkout ':''}${muted?'border border-slate-300 bg-white text-slate-900 hover:bg-slate-50':'bg-emerald-600 text-white shadow-pink-cta hover:bg-emerald-700'}`;const inner=<><span>{children}</span><ArrowRight className="h-5 w-5"/></>;if(isCheckout&&href)return <a href={href} onClick={event=>navigateToCheckout(event,href)} className={className}>{inner}</a>;return <a href={href||'#'} onClick={onClick?e=>{e.preventDefault();onClick()}:undefined} className={className}>{inner}</a>};
@@ -111,12 +111,10 @@ function Bonuses(){
       </div>
       <div className="bonus-carousel-viewport" aria-label="Carrossel de cinco bônus" onScroll={handleBonusScroll}>
         <div className="bonus-carousel-track">
-          {bonuses.map(({title,description}, index) => (
+          {bonuses.map(({title,description,image}, index) => (
             <article key={title} className="bonus-card">
-              <div className="bonus-card-image bonus-card-icon" aria-hidden="true">
-                <span className="bonus-card-number">{String(index + 1).padStart(2,'0')}</span>
-                <Sparkles className="h-12 w-12 text-blue-600"/>
-                <span className="bonus-card-label">BÔNUS</span>
+              <div className="bonus-card-image">
+                <img src={image} alt={title} width={720} height={720} loading="lazy" decoding="async"/>
               </div>
               <div className="bonus-card-copy">
                 <h3>{title}</h3>
