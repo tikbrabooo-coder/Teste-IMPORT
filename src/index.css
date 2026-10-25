@@ -1820,3 +1820,21 @@ footer {
     height: 200px !important;
   }
 }
+
+
+/* Correções de alinhamento global e contraste do selo de garantia. */
+#garantia { background: #F8FAFC !important; }
+#garantia h2 { color: #111827 !important; text-align: center !important; }
+#garantia h2 span { color: #B8860B !important; }
+#garantia .guarantee-description { color: #475569 !important; }
+#garantia > div.guarantee-inner { grid-template-columns: minmax(0, 240px) minmax(0, 1fr) !important; max-width: 900px !important; }
+#garantia .guarantee-seal img { background: #FFFFFF !important; border-radius: 50%; }
+#hero-section .hero-mockup-link { width: min(100%, 672px) !important; max-width: 672px !important; left: auto !important; transform: none !important; margin-left: auto !important; margin-right: auto !important; }
+#hero-section .hero-mockup-link img { display: block !important; width: 100% !important; max-width: 672px !important; margin: 0 auto !important; object-fit: contain !important; }
+#hero-section > div { width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
+#mapas-preview > div, #pain-solutions > div, #bonus-section > div, #ofertas > div, #faq > div { margin-left: auto !important; margin-right: auto !important; }
+@media (max-width: 700px) {
+ #garantia > div.guarantee-inner { grid-template-columns: minmax(0, 1fr) !important; }
+ #garantia h2, #garantia .guarantee-description { text-align: center !important; }
+ #hero-section .hero-mockup-link { width: 100% !important; max-width: 100% !important; }
+}
