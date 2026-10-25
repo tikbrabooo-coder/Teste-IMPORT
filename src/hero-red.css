@@ -867,6 +867,8 @@ body,
   object-fit: contain !important;
   border: 0 !important;
   box-shadow: none !important;
+  /* Remove visualmente o fundo branco do JPG, preservando o selo original. */
+  mix-blend-mode: multiply !important;
 }
 
 #root #garantia .guarantee-copy {
@@ -991,23 +993,4 @@ body,
 #root .hero-offer-text {
   font-family: "Inter", Arial, Helvetica, sans-serif !important;
   font-weight: 800 !important;
-}
-
-/* Selo vetorial sem preenchimento: deixa o azul escuro da seção transparecer. */
-#root #garantia .guarantee-seal-art {
-  display: block !important;
-  width: 100% !important;
-  max-width: 220px !important;
-  height: auto !important;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  overflow: visible !important;
-  font-family: "Inter", Arial, Helvetica, sans-serif !important;
-}
-
-@media (max-width: 700px) {
-  #root #garantia .guarantee-seal-art {
-    max-width: 180px !important;
-  }
 }
