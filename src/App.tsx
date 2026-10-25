@@ -45,7 +45,7 @@ function Hero(){return <><aside className="hero-offer-banner w-full bg-[#E53935]
 function MapsSection(){
   return <section id="mapas-preview" className="perf-section bg-[#F7FAFF] px-4 py-12 sm:py-16">
     <div className="mx-auto max-w-5xl">
-      <h2 className="mb-8 text-center text-2xl font-black text-slate-900 sm:text-4xl">VEJA COMO A <span className="heading-accent-cyan">METACOGNIÇÃO</span> PODE FICAR MAIS VISUAL</h2>
+      <h2 className="mb-8 text-center text-2xl font-black text-slate-900 sm:text-4xl">VEJA NA PRÁTICA <span className="text-[#8CCFFF]">UM POUCO DO MATERIAL</span></h2>
       <div className="mx-auto max-w-3xl overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-xl sm:p-5">
         <img src={HERO_MOCKUP} alt="Exemplo visual de mapas mentais de metacognição" width={1024} height={1024} loading="lazy" decoding="async" className="mx-auto h-auto w-full object-contain"/>
       </div>
