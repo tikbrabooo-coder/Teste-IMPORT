@@ -745,3 +745,16 @@ body,
 #hero-section h1.metacognition-headline .headline-script {
   font-family: Arial, Helvetica, sans-serif !important;
 }
+
+/* Tipografia explícita da seção de ofertas: letras e números em Sans Serif uniforme. */
+#root #ofertas,
+#root #ofertas * {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-style: normal !important;
+}
+
+#root #ofertas .pricing-price-original,
+#root #ofertas .pricing-price-current {
+  font-variant-numeric: tabular-nums !important;
+  font-feature-settings: "tnum" 1 !important;
+}
