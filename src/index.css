@@ -1822,172 +1822,33 @@ footer {
 }
 
 
-/* Correções de alinhamento global e contraste do selo de garantia. */
-#garantia { background: #F8FAFC !important; }
-#garantia h2 { color: #111827 !important; text-align: center !important; }
-#garantia h2 span { color: #B8860B !important; }
-#garantia .guarantee-description { color: #475569 !important; }
-#garantia > div.guarantee-inner { grid-template-columns: minmax(0, 240px) minmax(0, 1fr) !important; max-width: 900px !important; }
-#garantia .guarantee-seal img { background: #FFFFFF !important; border-radius: 50%; }
-#hero-section .hero-mockup-link { width: min(100%, 672px) !important; max-width: 672px !important; left: auto !important; transform: none !important; margin-left: auto !important; margin-right: auto !important; }
-#hero-section .hero-mockup-link img { display: block !important; width: 100% !important; max-width: 672px !important; margin: 0 auto !important; object-fit: contain !important; }
-#hero-section > div { width: 100% !important; margin-left: auto !important; margin-right: auto !important; }
-#mapas-preview > div, #pain-solutions > div, #bonus-section > div, #ofertas > div, #faq > div { margin-left: auto !important; margin-right: auto !important; }
-@media (max-width: 700px) {
- #garantia > div.guarantee-inner { grid-template-columns: minmax(0, 1fr) !important; }
- #garantia h2, #garantia .guarantee-description { text-align: center !important; }
- #hero-section .hero-mockup-link { width: 100% !important; max-width: 100% !important; }
-}
-
-
-/* Definitive Hero mockup alignment fix: remove oversizing and transform offsets. */
-#hero-section .hero-mockup-link { position: static !important; display: block !important; left: auto !important; transform: none !important; width: min(100%, 540px) !important; max-width: 540px !important; margin: 18px auto 0 !important; padding: 0 !important; box-sizing: border-box !important; }
-#hero-section .hero-mockup-image { position: static !important; display: block !important; width: 100% !important; max-width: 540px !important; height: auto !important; aspect-ratio: auto !important; margin: 0 auto !important; padding: 0 !important; object-fit: contain !important; transform: none !important; }
-@media (max-width: 700px) { #hero-section .hero-mockup-link { width: min(100%, 430px) !important; max-width: 430px !important; margin-top: 14px !important; } #hero-section .hero-mockup-image { max-width: 430px !important; } }
-
-
-/* Hero: espaçamento e composição seguindo a referência de Neurociência. */
-#hero-section > div {
-  max-width: 760px !important;
-}
-#hero-section .metacognition-headline {
-  margin-bottom: 0 !important;
-}
-#hero-section .hero-mockup-link {
-  width: min(100%, 520px) !important;
-  max-width: 520px !important;
-  margin: 8px auto 0 !important;
-  line-height: 0 !important;
-}
-#hero-section .hero-mockup-image {
-  width: 100% !important;
-  max-width: 520px !important;
-  height: auto !important;
-  aspect-ratio: auto !important;
-  object-fit: contain !important;
-}
-#hero-section .hero-mockup-link + p {
-  max-width: 620px !important;
-  margin: 16px auto 0 !important;
-  color: #F4F7FF !important;
-  font-size: clamp(15px, 2.1vw, 18px) !important;
-  font-weight: 500 !important;
-  line-height: 1.55 !important;
-  text-align: center !important;
-}
-@media (max-width: 700px) {
-  #hero-section { padding-top: 18px !important; }
-  #hero-section > div { max-width: 100% !important; }
-  #hero-section .hero-mockup-link {
-    width: 100% !important;
-    max-width: 430px !important;
-    margin-top: 6px !important;
-  }
-  #hero-section .hero-mockup-image { max-width: 430px !important; }
-  #hero-section .hero-mockup-link + p {
-    margin-top: 12px !important;
-    font-size: 15px !important;
-    line-height: 1.55 !important;
-  }
-}
-
-
-/* Ajuste final da Hero para reproduzir o enquadramento do modelo de referência. */
-#hero-section {
-  padding-top: 18px !important;
-  padding-bottom: 28px !important;
-  background: #071329 !important;
-}
-#hero-section > div { max-width: 760px !important; }
-#hero-section .hero-mockup-link {
-  width: min(100%, 390px) !important;
-  max-width: 390px !important;
-  margin: 4px auto 0 !important;
-}
-#hero-section .hero-mockup-image {
-  display: block !important;
-  width: 100% !important;
-  max-width: 390px !important;
-  height: auto !important;
-  aspect-ratio: 1 / 1 !important;
-  object-fit: contain !important;
-}
-#hero-section .hero-mockup-link + p {
-  max-width: 560px !important;
-  margin: 10px auto 0 !important;
-  color: #F5F7FC !important;
-  font-size: 16px !important;
-  line-height: 1.5 !important;
-  text-align: center !important;
-}
-#hero-section .hero-mockup-link ~ .max-w-xl {
-  max-width: 560px !important;
-  margin: 18px auto 0 !important;
-}
-#garantia {
-  background: #F8FAFC !important;
-  padding: 34px 18px 42px !important;
-}
-#garantia > div.guarantee-inner {
-  display: grid !important;
-  grid-template-columns: minmax(0, 240px) minmax(0, 1fr) !important;
-  align-items: center !important;
-  gap: 28px !important;
-  width: 100% !important;
-  max-width: 900px !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-#garantia .guarantee-seal {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-height: 240px !important;
-  background: transparent !important;
-}
-#garantia .guarantee-seal img {
-  display: block !important;
-  width: 240px !important;
-  height: 240px !important;
-  max-width: 100% !important;
-  object-fit: contain !important;
-  opacity: 1 !important;
-  filter: none !important;
-  mix-blend-mode: normal !important;
-  background: transparent !important;
-  border-radius: 0 !important;
-}
-#garantia .guarantee-copy { min-width: 0 !important; }
-#garantia h2 { color: #111827 !important; text-align: left !important; }
-#garantia h2 span { color: #B8860B !important; }
-#garantia .guarantee-description { color: #475569 !important; text-align: left !important; }
-@media (max-width: 700px) {
-  #hero-section { padding: 16px 14px 28px !important; }
-  #hero-section .hero-mockup-link {
-    width: min(100%, 350px) !important;
-    max-width: 350px !important;
-    margin-top: 3px !important;
-  }
-  #hero-section .hero-mockup-image { max-width: 350px !important; }
-  #hero-section .hero-mockup-link + p {
-    margin-top: 10px !important;
-    font-size: 15px !important;
-    line-height: 1.5 !important;
-  }
-  #hero-section .hero-mockup-link ~ .max-w-xl { margin-top: 16px !important; }
-  #garantia { padding: 26px 18px 32px !important; }
-  #garantia > div.guarantee-inner {
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 12px !important;
-  }
-  #garantia .guarantee-seal { min-height: 0 !important; }
-  #garantia .guarantee-seal img {
-    width: 210px !important;
-    height: 210px !important;
-  }
-  #garantia h2, #garantia .guarantee-description { text-align: center !important; }
+/* Ajustes consolidados da Hero e da seção de garantia. */
+#hero-section { background:#071329 !important; padding:16px 16px 30px !important; }
+#hero-section > div { width:100% !important; max-width:760px !important; margin-inline:auto !important; }
+#hero-section .metacognition-headline { margin:0 auto !important; }
+#hero-section .hero-mockup-link { position:static !important; display:block !important; width:min(100%,430px) !important; max-width:430px !important; margin:4px auto 0 !important; padding:0 !important; transform:none !important; line-height:0 !important; }
+#hero-section .hero-mockup-image { position:static !important; display:block !important; width:100% !important; max-width:430px !important; height:auto !important; aspect-ratio:1/1 !important; margin:0 auto !important; object-fit:contain !important; transform:none !important; }
+#hero-section .hero-mockup-link + p { max-width:560px !important; margin:8px auto 0 !important; color:#F5F7FC !important; font-size:16px !important; font-weight:500 !important; line-height:1.5 !important; text-align:center !important; }
+#hero-section .hero-mockup-link ~ .max-w-xl { width:100% !important; max-width:560px !important; margin:16px auto 0 !important; }
+#hero-section .hero-assurance-strip { width:min(100%,420px) !important; margin:18px auto 0 !important; }
+#garantia { background:#F7F9FC !important; padding:38px 18px 44px !important; }
+#garantia > div.guarantee-inner { display:grid !important; grid-template-columns:minmax(0,240px) minmax(0,1fr) !important; align-items:center !important; gap:28px !important; width:100% !important; max-width:900px !important; margin:0 auto !important; padding:26px !important; border:1px solid #D9E2EF !important; border-radius:22px !important; background:#FFFFFF !important; box-shadow:0 12px 30px rgba(15,35,65,.07) !important; }
+#garantia .guarantee-seal { display:flex !important; align-items:center !important; justify-content:center !important; min-width:0 !important; min-height:240px !important; padding:10px !important; background:#FFFFFF !important; border:1px solid #E8D9A8 !important; border-radius:20px !important; }
+#garantia .guarantee-seal img { display:block !important; width:100% !important; max-width:240px !important; height:auto !important; aspect-ratio:1/1 !important; margin:0 auto !important; padding:8px !important; object-fit:contain !important; opacity:1 !important; visibility:visible !important; filter:none !important; mix-blend-mode:normal !important; background:#FFFFFF !important; border-radius:50% !important; }
+#garantia .guarantee-copy { min-width:0 !important; }
+#garantia h2 { margin:0 !important; color:#111827 !important; font-size:clamp(24px,3vw,32px) !important; line-height:1.15 !important; text-align:left !important; }
+#garantia h2 span { color:#A77B12 !important; }
+#garantia .guarantee-description { margin-top:14px !important; color:#475569 !important; font-size:16px !important; line-height:1.65 !important; text-align:left !important; }
+@media (max-width:700px) {
+ #hero-section { padding:14px 14px 26px !important; }
+ #hero-section .hero-mockup-link { width:min(100%,390px) !important; max-width:390px !important; margin-top:2px !important; }
+ #hero-section .hero-mockup-image { max-width:390px !important; }
+ #hero-section .hero-mockup-link + p { max-width:390px !important; margin-top:6px !important; font-size:15px !important; line-height:1.45 !important; }
+ #hero-section .hero-mockup-link ~ .max-w-xl { margin-top:13px !important; }
+ #hero-section .hero-assurance-strip { margin-top:14px !important; }
+ #garantia { padding:28px 14px 34px !important; }
+ #garantia > div.guarantee-inner { grid-template-columns:minmax(0,1fr) !important; gap:16px !important; padding:18px !important; border-radius:18px !important; }
+ #garantia .guarantee-seal { min-height:0 !important; width:min(100%,250px) !important; margin:0 auto !important; padding:8px !important; }
+ #garantia .guarantee-seal img { width:220px !important; max-width:100% !important; height:auto !important; }
+ #garantia h2, #garantia .guarantee-description { text-align:center !important; }
 }
