@@ -1755,3 +1755,9 @@ footer {
   color: #000000 !important;
   font-family: "Inter", Arial, Helvetica, sans-serif !important;
 }
+
+
+/* FAQ section warm beige background. */
+#faq {
+  background: #F4E8D5 !important;
+}
