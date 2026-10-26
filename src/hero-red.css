@@ -1532,3 +1532,106 @@ html body section#bonus-section.perf-section {
 #root .site-footer .site-footer-headline .site-footer-metacognition {
   color: #39C9F4 !important;
 }
+
+
+/* Pop-up do plano básico: versão compacta, limpa e com tipografia Sans Serif. */
+#upgrade-modal-card {
+  box-sizing: border-box !important;
+  max-height: min(80vh, 480px) !important;
+  overflow-y: auto !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 18px !important;
+  padding: 22px !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+}
+#upgrade-modal-label.upgrade-modal-label,
+#upgrade-modal-card .upgrade-modal-label {
+  margin: 0 30px 8px 0 !important;
+  color: #1677D2 !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  line-height: 1.3 !important;
+  letter-spacing: .09em !important;
+  text-transform: uppercase !important;
+}
+#upgrade-modal-card .upgrade-modal-title {
+  margin: 0 !important;
+  color: #0F172A !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-size: clamp(20px, 5vw, 23px) !important;
+  font-weight: 900 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -.035em !important;
+}
+#upgrade-modal-card .upgrade-modal-title span {
+  color: #1677D2 !important;
+  white-space: nowrap !important;
+}
+#upgrade-modal-card .upgrade-modal-description {
+  margin: 10px 0 16px !important;
+  color: #526174 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+}
+#upgrade-modal-card .upgrade-modal-description strong {
+  color: #0F172A !important;
+  font-weight: 800 !important;
+}
+#upgrade-modal-card .upgrade-modal-primary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 44px !important;
+  padding: 12px 14px !important;
+  border-radius: 11px !important;
+  background: #00B95B !important;
+  color: #FFFFFF !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 850 !important;
+  line-height: 1.25 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  transition: background-color .18s ease, transform .18s ease !important;
+}
+#upgrade-modal-card .upgrade-modal-primary:hover {
+  background: #009F4D !important;
+  transform: translateY(-1px) !important;
+}
+#upgrade-modal-card .upgrade-modal-secondary {
+  display: block !important;
+  margin: 11px 0 0 !important;
+  padding: 7px 4px 0 !important;
+  color: #64748B !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+}
+#upgrade-modal-card .upgrade-modal-secondary:hover {
+  color: #1677D2 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+#upgrade-modal-card #upgrade-modal-close {
+  right: 9px !important;
+  top: 9px !important;
+  width: 28px !important;
+  height: 28px !important;
+}
+@media (max-width: 400px) {
+  #upgrade-modal-card {
+    padding: 19px !important;
+    max-width: 310px !important;
+  }
+  #upgrade-modal-card .upgrade-modal-title {
+    font-size: 20px !important;
+  }
+  #upgrade-modal-card .upgrade-modal-description {
+    font-size: 12px !important;
+  }
+}
