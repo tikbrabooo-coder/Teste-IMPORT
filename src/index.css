@@ -1852,3 +1852,27 @@ footer {
  #garantia .guarantee-seal img { width:220px !important; max-width:100% !important; height:auto !important; }
  #garantia h2, #garantia .guarantee-description { text-align:center !important; }
 }
+
+
+/* Hero ocupa a altura visível da tela, mantendo toda a oferta antes da próxima seção. */
+#hero-section {
+  box-sizing: border-box !important;
+  min-height: calc(100vh - 33px) !important;
+  min-height: calc(100svh - 33px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding-top: 14px !important;
+  padding-bottom: 30px !important;
+}
+#hero-section > div {
+  flex: 0 0 auto !important;
+}
+@media (max-width: 700px) {
+  #hero-section {
+    min-height: calc(100vh - 33px) !important;
+    min-height: calc(100svh - 33px) !important;
+    padding-top: 10px !important;
+    padding-bottom: 22px !important;
+  }
+}
