@@ -1028,3 +1028,21 @@ html body section#bonus-section.perf-section {
     padding-bottom: 82px !important;
   }
 }
+
+/* Bônus: seção mais alta e fundo azul-marinho bem escuro e uniforme. */
+html body section#bonus-section.perf-section {
+  background: #020817 !important;
+  background-color: #020817 !important;
+  background-image: none !important;
+  padding-top: 88px !important;
+  padding-bottom: 144px !important;
+}
+@media (max-width: 700px) {
+  html body section#bonus-section.perf-section {
+    background: #020817 !important;
+    background-color: #020817 !important;
+    background-image: none !important;
+    padding-top: 72px !important;
+    padding-bottom: 112px !important;
+  }
+}
