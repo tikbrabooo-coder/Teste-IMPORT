@@ -1995,3 +1995,28 @@ footer {
     margin-top: 10px !important;
   }
 }
+
+
+/* Bônus: fundo azul-marinho bem escuro e seção um pouco mais longa. */
+#bonus-section {
+  background: linear-gradient(180deg, #061329 0%, #081B36 100%) !important;
+  border-top: 1px solid #102B4D !important;
+  border-bottom: 1px solid #102B4D !important;
+  padding-top: 68px !important;
+  padding-bottom: 76px !important;
+}
+#bonus-section h2,
+#bonus-section .bonus-title,
+#bonus-section .bonus-title-line {
+  color: #F8FAFC !important;
+}
+#bonus-section > div > div:first-child p {
+  color: #B7C9E2 !important;
+}
+@media (max-width: 700px) {
+  #bonus-section {
+    background: linear-gradient(180deg, #061329 0%, #081B36 100%) !important;
+    padding-top: 54px !important;
+    padding-bottom: 60px !important;
+  }
+}
