@@ -2188,3 +2188,27 @@ html body section#hero-section .metacognition-headline {
     margin-top: 7px !important;
   }
 }
+
+
+/* Ajuste final da seção de bônus: azul-marinho uniforme e um pouco mais alta. */
+html body section#bonus-section.perf-section {
+  background: #061329 !important;
+  background-color: #061329 !important;
+  background-image: none !important;
+  padding-top: 76px !important;
+  padding-bottom: 84px !important;
+}
+html body section#bonus-section.perf-section h2,
+html body section#bonus-section.perf-section .bonus-title,
+html body section#bonus-section.perf-section .bonus-title-line {
+  color: #F8FAFC !important;
+}
+@media (max-width: 700px) {
+  html body section#bonus-section.perf-section {
+    background: #061329 !important;
+    background-color: #061329 !important;
+    background-image: none !important;
+    padding-top: 60px !important;
+    padding-bottom: 68px !important;
+  }
+}
