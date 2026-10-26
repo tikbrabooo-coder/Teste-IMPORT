@@ -867,8 +867,12 @@ body,
   object-fit: contain !important;
   border: 0 !important;
   box-shadow: none !important;
-  /* Remove visualmente o fundo branco do JPG, preservando o selo original. */
-  mix-blend-mode: multiply !important;
+  /* Preserva as cores douradas e azul-marinho do selo original; não escurecer sobre o fundo. */
+  mix-blend-mode: normal !important;
+  filter: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: transparent !important;
 }
 
 #root #garantia .guarantee-copy {
