@@ -1515,3 +1515,14 @@ html body section#bonus-section.perf-section {
     font-size: clamp(39px, 10.25vw, 52px) !important;
   }
 }
+
+
+/* Aumenta em 25% o título da seção de módulos, sem alterar os cards. */
+#root #modulos .modules-section-title {
+  font-size: clamp(31.25px, 4.75vw, 50px) !important;
+}
+@media (max-width: 760px) {
+  #root #modulos .modules-section-title {
+    font-size: clamp(30px, 8.75vw, 40px) !important;
+  }
+}
