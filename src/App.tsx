@@ -266,8 +266,8 @@ function UpgradeModal({open,onClose}:{open:boolean;onClose:()=>void}){
     <div id="upgrade-modal-card" className="relative w-full max-w-[330px] rounded-2xl bg-white p-4 shadow-2xl sm:max-w-[350px] sm:p-5">
       <button id="upgrade-modal-close" type="button" onClick={onClose} aria-label="Fechar oferta" className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200"><X className="h-4 w-4"/></button>
       <p className="upgrade-modal-label">Oferta especial</p>
-      <h2 className="upgrade-modal-title">Leve o Plano Completo por <span>R$ 19,90</span></h2>
-      <p className="upgrade-modal-description">Tenha os +150 mapas mentais e mais 7 materiais práticos por apenas <strong>R$ 7,10 a menos</strong> que o preço normal.</p>
+      <h2 className="upgrade-modal-title">Leve o Plano Completo por <span>R$ 17,90</span></h2>
+      <p className="upgrade-modal-description">Tenha os +150 mapas mentais e mais 7 materiais práticos por apenas <strong>R$ 9,10 a menos</strong> que o preço normal de R$ 27,00.</p>
       <a id="upgrade-modal-primary" href={completeUrl} onClick={event=>navigateToCheckout(event,completeUrl)} className="upgrade-modal-primary">Quero o Plano Completo</a>
       <a id="upgrade-modal-secondary" href={essentialUrl} onClick={event=>navigateToCheckout(event,essentialUrl)} className="upgrade-modal-secondary">Não, prefiro o Essencial por R$ 9,90</a>
     </div>
