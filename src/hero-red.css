@@ -1190,7 +1190,7 @@ html body section#bonus-section.perf-section {
   width: 100% !important;
   text-align: center !important;
 }
-#root #mapas-preview .maps-preview-title-line.text-\\[\\#8CCFFF\\] {
+#root #mapas-preview .maps-preview-title-highlight {
   color: #8CCFFF !important;
 }
 @media (max-width: 700px) {
