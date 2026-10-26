@@ -257,7 +257,7 @@ function FAQ(){
     </div>
   </section>;
 }
-function Footer(){return <footer className="site-footer"><div className="site-footer-inner"><h2 className="site-footer-headline">MAPAS MENTAIS METACOGNIÇÃO</h2><p className="site-footer-description">Material visual e prático para dominar a Metacognição e acelerar a sua aprendizagem.</p><nav className="site-footer-nav" aria-label="Links do rodapé"><a href="#ofertas">Planos e Valores</a><a href="#garantia">Garantia de 30 Dias</a><a href="#faq">Perguntas Frequentes</a></nav><p className="site-footer-copyright">© 2026 Mapas Mentais de Metacognição • Todos os direitos reservados.</p><p className="site-footer-disclaimer">Material digital para estudantes e profissionais.</p></div></footer>}
+function Footer(){return <footer className="site-footer"><div className="site-footer-inner"><h2 className="site-footer-headline">MAPAS MENTAIS <span className="site-footer-metacognition">METACOGNIÇÃO</span></h2><p className="site-footer-description">Material visual e prático para dominar a Metacognição e acelerar a sua aprendizagem.</p><nav className="site-footer-nav" aria-label="Links do rodapé"><a href="#ofertas">Planos e Valores</a><a href="#garantia">Garantia de 30 Dias</a><a href="#faq">Perguntas Frequentes</a></nav><p className="site-footer-copyright">© 2026 Mapas Mentais de Metacognição • Todos os direitos reservados.</p><p className="site-footer-disclaimer">Material digital para estudantes e profissionais.</p></div></footer>}
 function UpgradeModal({open,onClose}:{open:boolean;onClose:()=>void}){
   if(!open)return null;
   const modal=<div className="fixed inset-0 z-[2147483647] flex items-center justify-center bg-slate-950/75 p-4" role="dialog" aria-modal="true" aria-label="Oferta especial do Plano Completo">
