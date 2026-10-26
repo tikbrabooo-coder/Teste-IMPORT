@@ -998,3 +998,33 @@ body,
   font-family: "Inter", Arial, Helvetica, sans-serif !important;
   font-weight: 800 !important;
 }
+
+/* Ajustes finais solicitados: CTA mais verde, base da Hero levemente mais azul e Bônus com mais respiro inferior. */
+#root #hero-section > div > .max-w-xl > a[href="#ofertas"] {
+  background-color: #08B94F !important;
+  border-color: #08B94F !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 24px rgba(8, 185, 79, .28), 0 2px 6px rgba(0, 0, 0, .08) !important;
+}
+#root #hero-section > div > .max-w-xl > a[href="#ofertas"]:hover {
+  background-color: #079B42 !important;
+  border-color: #079B42 !important;
+}
+#root #hero-section {
+  background-color: #030914 !important;
+  background-image:
+    linear-gradient(180deg, rgba(3, 9, 20, 0) 48%, rgba(20, 60, 101, .52) 100%),
+    linear-gradient(rgba(80, 133, 174, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 133, 174, .045) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 34%, rgba(32, 93, 143, .22), transparent 66%),
+    linear-gradient(115deg, #101f30 0%, #071326 48%, #030817 100%) !important;
+  background-size: auto, 42px 42px, 42px 42px, auto, auto !important;
+}
+html body section#bonus-section.perf-section {
+  padding-bottom: 102px !important;
+}
+@media (max-width: 700px) {
+  html body section#bonus-section.perf-section {
+    padding-bottom: 82px !important;
+  }
+}
