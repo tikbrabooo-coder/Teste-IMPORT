@@ -75,6 +75,37 @@ function MapsSection(){
     </div>
   </section>;
 }
+
+
+function ModulesSection(){
+  const modules = [
+    {number:"01", title:"Fundamentos da Metacognição"},
+    {number:"02", title:"Autoconhecimento e Monitoramento Cognitivo"},
+    {number:"03", title:"Mapeamento dos Padrões de Pensamento"},
+    {number:"04", title:"Estratégias de Regulação e Controle Mental"},
+    {number:"05", title:"Neuroplasticidade e Flexibilidade Cognitiva"},
+    {number:"06", title:"Atenção, Foco e Funções Executivas"},
+    {number:"07", title:"Tomada de Decisão e Escolhas Conscientes"},
+    {number:"08", title:"Gestão de Viéses Cognitivos e Crenças"},
+    {number:"09", title:"Metacognição Aplicada à Resolução de Problemas"},
+    {number:"10", title:"Práticas Diárias de Alta Performance Mental"}
+  ];
+  return <section id="modulos" className="modules-section px-4">
+    <div className="modules-section-inner mx-auto">
+      <h2 className="modules-section-title">
+        <span>MAPAS ORGANIZADOS EM</span>
+        <span className="modules-section-highlight">10 MÓDULOS</span>
+      </h2>
+      <div className="modules-grid">
+        {modules.map(module => <article className="module-card" key={module.number}>
+          <span className="module-number">{module.number}</span>
+          <div className="module-card-title">{module.title}</div>
+        </article>)}
+      </div>
+    </div>
+  </section>;
+}
+
 function PainSolutions(){
   const items = [
     {
@@ -250,4 +281,4 @@ function UpgradeModal({open,onClose}:{open:boolean;onClose:()=>void}){
   </div>;
   return typeof document!=='undefined'?createPortal(modal,document.body):null
 }
-export default function App(){const[upgradeOpen,setUpgradeOpen]=useState(false);useEffect(()=>{window.scrollTo(0,0)},[]);return <main className="dark-tech-shell min-h-screen overflow-x-hidden"><Hero/><MapsSection/><Bonuses/><Pricing onUpgrade={()=>setUpgradeOpen(true)}/><Guarantee/><FAQ/><Footer/><UpgradeModal open={upgradeOpen} onClose={()=>setUpgradeOpen(false)}/></main>}
+export default function App(){const[upgradeOpen,setUpgradeOpen]=useState(false);useEffect(()=>{window.scrollTo(0,0)},[]);return <main className="dark-tech-shell min-h-screen overflow-x-hidden"><Hero/><MapsSection/><ModulesSection/><Bonuses/><Pricing onUpgrade={()=>setUpgradeOpen(true)}/><Guarantee/><FAQ/><Footer/><UpgradeModal open={upgradeOpen} onClose={()=>setUpgradeOpen(false)}/></main>}
