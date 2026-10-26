@@ -1504,3 +1504,14 @@ html body section#bonus-section.perf-section {
     white-space: normal !important;
   }
 }
+
+
+/* Aumenta em aproximadamente 25% o título da garantia, mantendo o formato em duas linhas. */
+#root #garantia .guarantee-main-title {
+  font-size: clamp(45px, 6.25vw, 70px) !important;
+}
+@media (max-width: 700px) {
+  #root #garantia .guarantee-main-title {
+    font-size: clamp(39px, 10.25vw, 52px) !important;
+  }
+}
