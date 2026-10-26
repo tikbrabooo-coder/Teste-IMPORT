@@ -2041,3 +2041,72 @@ html body section#bonus-section.perf-section {
     background-image: none !important;
   }
 }
+
+
+/* Hero — espaçamento alinhado ao print de referência: conteúdo começa perto do topo e ocupa a tela sem sobras. */
+html body section#hero-section {
+  justify-content: flex-start !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+html body section#hero-section > div {
+  margin-top: 0 !important;
+}
+html body section#hero-section .metacognition-headline,
+html body section#hero-section h1 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+html body section#hero-section .hero-mockup-link {
+  width: min(100%, 520px) !important;
+  max-width: 520px !important;
+  margin: 0 auto !important;
+}
+html body section#hero-section .hero-mockup-image {
+  display: block !important;
+  width: 100% !important;
+  max-width: 520px !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+html body section#hero-section .hero-mockup-link + p {
+  margin-top: 2px !important;
+}
+html body section#hero-section .hero-mockup-link ~ .max-w-xl {
+  margin-top: 10px !important;
+}
+html body section#hero-section .hero-assurance-strip {
+  margin-top: 10px !important;
+}
+@media (max-width: 700px) {
+  html body section#hero-section {
+    min-height: calc(100svh - 33px) !important;
+    padding: 10px 10px 12px !important;
+  }
+  html body section#hero-section .metacognition-headline,
+  html body section#hero-section h1 {
+    line-height: .96 !important;
+  }
+  html body section#hero-section .hero-mockup-link {
+    width: min(125%, 470px) !important;
+    max-width: 470px !important;
+    margin-left: 50% !important;
+    margin-right: 0 !important;
+    transform: translateX(-50%) !important;
+  }
+  html body section#hero-section .hero-mockup-image {
+    max-width: 470px !important;
+  }
+  html body section#hero-section .hero-mockup-link + p {
+    max-width: 390px !important;
+    margin-top: 1px !important;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+  }
+  html body section#hero-section .hero-mockup-link ~ .max-w-xl {
+    margin-top: 10px !important;
+  }
+  html body section#hero-section .hero-assurance-strip {
+    margin-top: 10px !important;
+  }
+}
