@@ -2110,3 +2110,70 @@ html body section#hero-section .hero-assurance-strip {
     margin-top: 10px !important;
   }
 }
+
+
+/* Hero mobile: ampliar o mockup e distribuir o conteúdo pela altura, sem vazio no rodapé. */
+@media (max-width: 700px) {
+  html body section#hero-section {
+    box-sizing: border-box !important;
+    min-height: calc(100svh - 32px) !important;
+    height: auto !important;
+    padding: 8px 10px 14px !important;
+    justify-content: flex-start !important;
+  }
+  html body section#hero-section > div {
+    display: flex !important;
+    flex: 1 0 auto !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: calc(100svh - 54px) !important;
+    width: 100% !important;
+    max-width: 760px !important;
+    margin: 0 auto !important;
+  }
+  html body section#hero-section .metacognition-headline,
+  html body section#hero-section h1 {
+    flex: 0 0 auto !important;
+    margin: 0 auto !important;
+    line-height: .96 !important;
+  }
+  html body section#hero-section .hero-mockup-link {
+    flex: 0 0 auto !important;
+    display: block !important;
+    width: min(135%, 500px) !important;
+    max-width: 500px !important;
+    margin: 0 0 0 50% !important;
+    padding: 0 !important;
+    transform: translateX(-50%) !important;
+    line-height: 0 !important;
+  }
+  html body section#hero-section .hero-mockup-image {
+    display: block !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+  }
+  html body section#hero-section .hero-mockup-link + p {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 390px !important;
+    margin: 0 auto !important;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+  }
+  html body section#hero-section .hero-mockup-link ~ .max-w-xl {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+  }
+  html body section#hero-section .hero-assurance-strip {
+    flex: 0 0 auto !important;
+    width: min(100%, 420px) !important;
+    margin: 0 auto !important;
+  }
+}
