@@ -1876,3 +1876,59 @@ footer {
     padding-bottom: 22px !important;
   }
 }
+
+
+/* Enquadramento final da Hero: conteúdo agrupado, mockup ajustado e subheadline logo abaixo. */
+#hero-section {
+  justify-content: flex-start !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+#hero-section .metacognition-headline {
+  margin-bottom: 0 !important;
+}
+#hero-section .hero-mockup-link {
+  width: min(100%, 430px) !important;
+  max-width: 430px !important;
+  margin-top: 2px !important;
+}
+#hero-section .hero-mockup-image {
+  width: 100% !important;
+  max-width: 430px !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+#hero-section .hero-mockup-link + p {
+  margin-top: 4px !important;
+}
+#hero-section .hero-mockup-link ~ .max-w-xl {
+  margin-top: 12px !important;
+}
+#hero-section .hero-assurance-strip {
+  margin-top: 14px !important;
+}
+@media (max-width: 700px) {
+  #hero-section {
+    padding-top: 10px !important;
+    padding-bottom: 12px !important;
+  }
+  #hero-section .hero-mockup-link {
+    width: min(100%, 365px) !important;
+    max-width: 365px !important;
+    margin-top: 1px !important;
+  }
+  #hero-section .hero-mockup-image {
+    max-width: 365px !important;
+  }
+  #hero-section .hero-mockup-link + p {
+    margin-top: 3px !important;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+  }
+  #hero-section .hero-mockup-link ~ .max-w-xl {
+    margin-top: 10px !important;
+  }
+  #hero-section .hero-assurance-strip {
+    margin-top: 12px !important;
+  }
+}
