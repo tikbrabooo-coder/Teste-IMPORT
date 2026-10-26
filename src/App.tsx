@@ -64,7 +64,7 @@ function MapsSection(){
   );
   return <section id="mapas-preview" className="perf-section bg-[#F7FAFF] px-4 py-12 sm:py-16">
     <div className="mx-auto max-w-6xl">
-      <h2 className="mb-8 text-center text-2xl font-black text-slate-900 sm:text-4xl">VEJA NA PRÁTICA <span className="text-[#8CCFFF]">UM POUCO DO MATERIAL</span></h2>
+      <h2 className="maps-preview-title mb-8 text-center text-2xl font-black text-slate-900 sm:text-4xl"><span className="maps-preview-title-line">VEJA NA PRÁTICA UM</span><span className="maps-preview-title-line text-[#8CCFFF]">POUCO DO MATERIAL</span></h2>
       <div className="maps-auto-viewport" aria-label="Carrossel automático com cinco exemplos dos mapas mentais">
         <div className="maps-auto-track">
           {renderMapGroup(false)}

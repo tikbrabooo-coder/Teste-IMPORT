@@ -1168,3 +1168,56 @@ html body section#bonus-section.perf-section {
     font-size: 14px !important;
   }
 }
+
+/* Prévia dos mapas: seção um pouco mais alta e título dividido em duas linhas. */
+#root #mapas-preview {
+  padding-top: 82px !important;
+  padding-bottom: 92px !important;
+}
+#root #mapas-preview .maps-preview-title {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .08em !important;
+  width: 100% !important;
+  margin-bottom: 34px !important;
+  line-height: 1.08 !important;
+  text-wrap: balance;
+}
+#root #mapas-preview .maps-preview-title-line {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+#root #mapas-preview .maps-preview-title-line.text-\\[\\#8CCFFF\\] {
+  color: #8CCFFF !important;
+}
+@media (max-width: 700px) {
+  #root #mapas-preview {
+    padding-top: 62px !important;
+    padding-bottom: 74px !important;
+  }
+  #root #mapas-preview .maps-preview-title {
+    margin-bottom: 26px !important;
+    font-size: clamp(23px, 6.7vw, 30px) !important;
+    line-height: 1.12 !important;
+  }
+}
+
+/* Card do Plano Essencial: ligeiramente mais comprido que a altura base. */
+#root #ofertas .grid > .pricing-card:first-child {
+  height: calc(100% + 34px) !important;
+  min-height: 640px !important;
+  padding-bottom: 38px !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+@media (max-width: 700px) {
+  #root #ofertas .grid > .pricing-card:first-child {
+    height: auto !important;
+    min-height: 630px !important;
+    padding-bottom: 34px !important;
+    margin-bottom: 12px !important;
+  }
+}
