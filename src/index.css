@@ -2330,7 +2330,7 @@ html body section#garantia.perf-section .guarantee-seal img {
   object-fit:contain !important;
   opacity:1 !important;
   visibility:visible !important;
-  filter:brightness(0) saturate(100%) invert(76%) sepia(49%) saturate(504%) hue-rotate(8deg) brightness(101%) contrast(95%) !important;
+  filter:none !important;
   background:#FFFFFF !important;
   border-radius:50% !important;
   mix-blend-mode:normal !important;
