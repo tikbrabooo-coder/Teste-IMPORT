@@ -236,7 +236,7 @@ function FAQ(){
     {question:'Qual é a diferença entre o Plano Essencial e o Plano Completo?',answer:'O Plano Essencial reúne os +150 Mapas Mentais de Metacognição organizados por tema. O Plano Completo inclui todo esse acervo mais sete materiais práticos para aprofundar a autoavaliação cognitiva, a clareza mental e a tomada de decisões.'},
     {question:'Quais temas os mapas de metacognição abordam?',answer:'O conteúdo ajuda a refletir sobre padrões de pensamento, autoavaliação cognitiva, clareza mental, tomada de decisões, organização de ideias e os próprios processos de aprendizagem.'},
     {question:'Posso estudar pelo celular?',answer:'Sim. O material é digital e pode ser consultado pelo celular, tablet ou computador.'},
-    {question:'Como recebo o acesso ao material?',answer:'Após a confirmação do pagamento, você recebe as instruções de acesso digital conforme a plataforma de compra.'},
+    {question:'Como recebo o acesso ao material?',answer:'Após a confirmação do pagamento, você recebe pelo WhatsApp as instruções para acessar o material digital.'},
     {question:'Como funciona a garantia de 30 dias?',answer:'Você tem 30 dias para conhecer o material. Caso ele não atenda às suas expectativas, poderá solicitar o reembolso dentro das condições da plataforma de pagamento.'}
   ];
   return <section id="faq" className="bg-[#F3F7FC] px-4 py-12 sm:py-16">
