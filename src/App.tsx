@@ -71,7 +71,7 @@ function MapsSection(){
           {renderMapGroup(true)}
         </div>
       </div>
-      <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-relaxed text-slate-600 sm:text-base">Um material visual para organizar pensamentos, refletir sobre seus próprios processos mentais e revisar ideias com mais clareza.</p>
+      
     </div>
   </section>;
 }
