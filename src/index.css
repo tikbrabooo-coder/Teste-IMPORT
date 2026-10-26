@@ -2177,3 +2177,14 @@ html body section#hero-section .hero-assurance-strip {
     margin: 0 auto !important;
   }
 }
+
+
+/* Desloca levemente para baixo apenas o título da Hero. */
+html body section#hero-section .metacognition-headline {
+  margin-top: 6px !important;
+}
+@media (max-width: 700px) {
+  html body section#hero-section .metacognition-headline {
+    margin-top: 7px !important;
+  }
+}
