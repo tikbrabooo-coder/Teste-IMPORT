@@ -2212,3 +2212,92 @@ html body section#bonus-section.perf-section .bonus-title-line {
     padding-bottom: 68px !important;
   }
 }
+
+
+/* Carrossel contínuo da seção "Veja na prática": cinco imagens em movimento infinito. */
+#mapas-preview .maps-auto-viewport {
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#mapas-preview .maps-auto-track {
+  display: flex !important;
+  width: max-content !important;
+  align-items: stretch !important;
+  animation: maps-preview-marquee 42s linear infinite !important;
+  will-change: transform;
+}
+#mapas-preview .maps-auto-group {
+  display: flex !important;
+  flex: 0 0 auto !important;
+  align-items: stretch !important;
+  gap: 18px !important;
+  padding-right: 18px !important;
+}
+#mapas-preview .maps-preview-card {
+  display: flex !important;
+  flex: 0 0 auto !important;
+  width: clamp(280px, 31vw, 390px) !important;
+  min-width: 0 !important;
+  align-items: stretch !important;
+  padding: 10px !important;
+  overflow: hidden !important;
+  border: 1px solid #D8E4F3 !important;
+  border-radius: 22px !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 10px 28px rgba(20, 48, 80, .09) !important;
+}
+#mapas-preview .maps-preview-image {
+  display: flex !important;
+  width: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  border-radius: 14px !important;
+  background: #FFFFFF !important;
+}
+#mapas-preview .maps-preview-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  padding: 4px !important;
+  object-fit: contain !important;
+  background: #FFFFFF !important;
+}
+@media (min-width: 1024px) {
+  #mapas-preview .maps-auto-track {
+    animation-duration: 52s !important;
+  }
+  #mapas-preview .maps-auto-group {
+    gap: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+@media (max-width: 700px) {
+  #mapas-preview .maps-auto-track {
+    animation-duration: 36s !important;
+  }
+  #mapas-preview .maps-auto-group {
+    gap: 12px !important;
+    padding-right: 12px !important;
+  }
+  #mapas-preview .maps-preview-card {
+    width: min(80vw, 330px) !important;
+    padding: 8px !important;
+    border-radius: 18px !important;
+  }
+  #mapas-preview .maps-preview-image {
+    border-radius: 12px !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #mapas-preview .maps-auto-track {
+    animation-duration: 180s !important;
+  }
+}
