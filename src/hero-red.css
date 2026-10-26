@@ -1635,3 +1635,19 @@ html body section#bonus-section.perf-section {
     font-size: 12px !important;
   }
 }
+
+
+/* Pequeno aumento de altura e fundo bege suave no pop-up de upgrade. */
+#upgrade-modal-card {
+  min-height: 350px !important;
+  max-height: min(84vh, 520px) !important;
+  padding: 27px 22px 24px !important;
+  background: #FBF7EF !important;
+  border-color: #E9E0D2 !important;
+}
+@media (max-width: 400px) {
+  #upgrade-modal-card {
+    min-height: 330px !important;
+    padding: 23px 19px 21px !important;
+  }
+}
