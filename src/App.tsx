@@ -43,11 +43,33 @@ function Hero(){return <><aside className="hero-offer-banner w-full bg-[#E53935]
   <span className="headline-script">de Metacognição</span>
 </h1><a href="#ofertas" className="hero-mockup-link mx-auto mt-3 block w-full sm:mt-5"><img src={HERO_MOCKUP} alt="Mockup +150 Mapas de Metacognição" width={1024} height={1024} fetchPriority="high" loading="eager" decoding="async" className="hero-mockup-image mx-auto block h-auto w-full object-contain"/></a><p className="mx-auto mt-7 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-xl">Entenda seus padrões de pensamento, reconheça hábitos automáticos e aprenda a tomar decisões mais conscientes com mapas mentais visuais e fáceis de revisar.</p><div className="mx-auto mt-5 max-w-xl"><Button href="#ofertas" onClick={()=>document.getElementById("ofertas")?.scrollIntoView({behavior:"smooth",block:"start"})}>QUERO MEUS MAPAS</Button></div><div className="hero-assurance-strip" aria-label="Garantias da compra"><div className="hero-assurance-item"><ShieldCheck className="hero-assurance-icon hero-assurance-shield" aria-hidden="true"/><span>Compra<br/>Segura</span></div><div className="hero-assurance-item"><Trophy className="hero-assurance-icon hero-assurance-trophy" aria-hidden="true"/><span>Satisfação<br/>Garantida</span></div><div className="hero-assurance-item"><LockKeyhole className="hero-assurance-icon hero-assurance-lock" aria-hidden="true"/><span>Privacidade<br/>Protegida</span></div></div></div></section></>}
 function MapsSection(){
+  const previewMaps = [
+    {file:"Creating_metacognition_mind_map_2K_20261026003658.jpg",alt:"Mapa mental de metacognição — exemplo 1"},
+    {file:"Metacognition_mind_map_creation_…_2K_20261026003713.jpg",alt:"Mapa mental de metacognição — exemplo 2"},
+    {file:"Creating_metacognition_mind_map_2K_20261026003725.jpg",alt:"Mapa mental de metacognição — exemplo 3"},
+    {file:"Metacognition_mind_map_prompt_ge…_2K_20261026003729.jpg",alt:"Mapa mental de metacognição — exemplo 4"},
+    {file:"Scientific_mind_maps_metacogniti…_2K_20261026003733.jpg",alt:"Mapa mental de metacognição — exemplo 5"}
+  ];
+  const previewImageUrl = (file:string) => `https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/${encodeURIComponent(file)}`;
+  const renderMapGroup = (duplicate:boolean) => (
+    <div className="maps-auto-group" aria-hidden={duplicate}>
+      {previewMaps.map((map) => (
+        <article className="maps-preview-card" key={duplicate ? `duplicate-${map.file}` : map.file}>
+          <div className="maps-preview-image">
+            <img src={previewImageUrl(map.file)} alt={duplicate ? "" : map.alt} loading={duplicate ? "lazy" : "eager"} decoding="async"/>
+          </div>
+        </article>
+      ))}
+    </div>
+  );
   return <section id="mapas-preview" className="perf-section bg-[#F7FAFF] px-4 py-12 sm:py-16">
-    <div className="mx-auto max-w-5xl">
+    <div className="mx-auto max-w-6xl">
       <h2 className="mb-8 text-center text-2xl font-black text-slate-900 sm:text-4xl">VEJA NA PRÁTICA <span className="text-[#8CCFFF]">UM POUCO DO MATERIAL</span></h2>
-      <div className="mx-auto max-w-3xl overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-xl sm:p-5">
-        <img src={HERO_MOCKUP} alt="Exemplo visual de mapas mentais de metacognição" width={1024} height={1024} loading="lazy" decoding="async" className="mx-auto h-auto w-full object-contain"/>
+      <div className="maps-auto-viewport" aria-label="Carrossel automático com cinco exemplos dos mapas mentais">
+        <div className="maps-auto-track">
+          {renderMapGroup(false)}
+          {renderMapGroup(true)}
+        </div>
       </div>
       <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-relaxed text-slate-600 sm:text-base">Um material visual para organizar pensamentos, refletir sobre seus próprios processos mentais e revisar ideias com mais clareza.</p>
     </div>
