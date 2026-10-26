@@ -269,7 +269,7 @@ function UpgradeModal({open,onClose}:{open:boolean;onClose:()=>void}){
       <h2 className="upgrade-modal-title">Leve o Plano Completo por <span>R$ 17,90</span></h2>
       <p className="upgrade-modal-description">Tenha os +150 mapas mentais e mais 7 materiais práticos por apenas <strong>R$ 9,10 a menos</strong> que o preço normal de R$ 27,00.</p>
       <a id="upgrade-modal-primary" href={completeUrl} onClick={event=>navigateToCheckout(event,completeUrl)} className="upgrade-modal-primary">Quero o Plano Completo</a>
-      <a id="upgrade-modal-secondary" href={essentialUrl} onClick={event=>navigateToCheckout(event,essentialUrl)} className="upgrade-modal-secondary">Não, prefiro o Essencial por R$ 9,90</a>
+      <a id="upgrade-modal-secondary" href={essentialUrl} onClick={event=>navigateToCheckout(event,essentialUrl)} className="upgrade-modal-secondary">Não, prefiro o Essencial por R$ 10,00</a>
     </div>
   </div>;
   return typeof document!=='undefined'?createPortal(modal,document.body):null
