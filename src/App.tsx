@@ -93,8 +93,8 @@ function ModulesSection(){
   return <section id="modulos" className="modules-section px-4">
     <div className="modules-section-inner mx-auto">
       <h2 className="modules-section-title">
-        <span>MAPAS ORGANIZADOS EM</span>
-        <span className="modules-section-highlight">10 MÓDULOS</span>
+        <span>organizados</span>
+        <span>em <span className="modules-section-highlight">10 módulos</span></span>
       </h2>
       <div className="modules-grid">
         {modules.map(module => <article className="module-card" key={module.number}>
