@@ -1464,3 +1464,43 @@ html body section#bonus-section.perf-section {
     hyphens: auto !important;
   }
 }
+
+
+/* Ajuste fino do título de garantia e contraste do botão. */
+#root #garantia .guarantee-main-title {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 2px !important;
+  margin: 0 auto 30px !important;
+  color: #FFFFFF !important;
+  font-family: "Inter", Arial, Helvetica, sans-serif !important;
+  font-size: clamp(36px, 5vw, 56px) !important;
+  font-weight: 900 !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.045em !important;
+  text-align: center !important;
+}
+#root #garantia .guarantee-main-title .guarantee-title-line {
+  display: block !important;
+  white-space: nowrap !important;
+}
+#root #garantia .guarantee-main-title .guarantee-title-cyan {
+  color: #39C9F4 !important;
+}
+#root #garantia .guarantee-cta,
+#root #garantia .guarantee-cta:hover {
+  color: #FFFFFF !important;
+}
+@media (max-width: 700px) {
+  #root #garantia .guarantee-main-title {
+    margin-bottom: 24px !important;
+    font-size: clamp(31px, 8.2vw, 42px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.04em !important;
+  }
+  #root #garantia .guarantee-main-title .guarantee-title-line {
+    white-space: normal !important;
+  }
+}
