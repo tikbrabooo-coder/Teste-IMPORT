@@ -1526,3 +1526,9 @@ html body section#bonus-section.perf-section {
     font-size: clamp(30px, 8.75vw, 40px) !important;
   }
 }
+
+
+/* Destaque azul apenas na palavra Metacognição do título do rodapé. */
+#root .site-footer .site-footer-headline .site-footer-metacognition {
+  color: #39C9F4 !important;
+}
