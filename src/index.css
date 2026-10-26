@@ -2024,3 +2024,20 @@ footer {
 
 html body section#bonus-section.perf-section { background-color:#020817 !important; background-image:linear-gradient(180deg,#020817 0%,#06152B 55%,#071A33 100%) !important; }
 @media(max-width:700px){ html body section#bonus-section.perf-section { background-color:#020817 !important; background-image:linear-gradient(180deg,#020817 0%,#06152B 55%,#071A33 100%) !important; } }
+
+
+/* Correção final: fundo azul-marinho uniforme, sem degradê ou faixas de cor. */
+html body section#bonus-section.perf-section {
+  background: #061329 !important;
+  background-color: #061329 !important;
+  background-image: none !important;
+  border-top-color: #102B4D !important;
+  border-bottom-color: #102B4D !important;
+}
+@media (max-width: 700px) {
+  html body section#bonus-section.perf-section {
+    background: #061329 !important;
+    background-color: #061329 !important;
+    background-image: none !important;
+  }
+}
