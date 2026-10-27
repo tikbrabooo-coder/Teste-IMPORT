@@ -5,8 +5,11 @@ import { ArrowDown, ArrowRight, Check, ChevronDown, ShieldCheck, Sparkles, Star,
 const ASSET = 'https://rainbow-brioche-d5ce72.netlify.app/images/';
 const HERO_SOURCE = 'https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Mapas%20de%20Metacogni%C3%A7%C3%A3o%20Infogr%C3%A1fica.png';
 const optimizeImage = (source: string, width: number, quality: 60 | 70 | 75 = 70) =>
-  `/_vercel/image?url=${encodeURIComponent(source)}&w=${width}&q=${quality}`;
-const HERO_MOCKUP = HERO_SOURCE;
+  `https://wsrv.nl/?url=${encodeURIComponent(source)}&w=${width}&q=${quality}&output=webp`;
+const HERO_MOCKUP = optimizeImage(HERO_SOURCE, 768, 70);
+const HERO_MOCKUP_SRCSET = [480, 640, 768, 1024, 1280]
+  .map((width) => `${optimizeImage(HERO_SOURCE, width, 70)} ${width}w`)
+  .join(', ');
 const img = (name: string, width = 768) => optimizeImage(ASSET + encodeURIComponent(name), width, 70);
 const CHECKOUTS = { ESSENCIAL: 'https://app.zuptos.com.br/checkout/379b8701b0decb56', COMPLETO: 'https://app.zuptos.com.br/checkout/555265f25997ca6c', UPSELL: 'https://app.zuptos.com.br/checkout/3562e3fbe46e2e86' };
 
@@ -41,7 +44,7 @@ function Hero(){return <><aside className="hero-offer-banner w-full bg-[#E53935]
   <span className="headline-main headline-line-one"><span className="headline-number">+150</span><span>Mapas</span></span>
   <span className="headline-main headline-line-two">Mentais</span>
   <span className="headline-script">de Metacognição</span>
-</h1><a href="#ofertas" className="hero-mockup-link mx-auto mt-3 block w-full sm:mt-5"><img src={HERO_MOCKUP} alt="Mockup +150 Mapas de Metacognição" width={1024} height={1024} fetchPriority="high" loading="eager" decoding="async" className="hero-mockup-image mx-auto block h-auto w-full object-contain"/></a><p className="mx-auto mt-7 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-xl">Entenda seus padrões de pensamento, reconheça hábitos automáticos e aprenda a tomar decisões mais conscientes com mapas mentais visuais e fáceis de revisar.</p><div className="mx-auto mt-5 max-w-xl"><Button href="#ofertas" onClick={()=>document.getElementById("ofertas")?.scrollIntoView({behavior:"smooth",block:"start"})}>QUERO MEUS MAPAS</Button></div><div className="hero-assurance-strip" aria-label="Garantias da compra"><div className="hero-assurance-item"><ShieldCheck className="hero-assurance-icon hero-assurance-shield" aria-hidden="true"/><span>Compra<br/>Segura</span></div><div className="hero-assurance-item"><Trophy className="hero-assurance-icon hero-assurance-trophy" aria-hidden="true"/><span>Satisfação<br/>Garantida</span></div><div className="hero-assurance-item"><LockKeyhole className="hero-assurance-icon hero-assurance-lock" aria-hidden="true"/><span>Privacidade<br/>Protegida</span></div></div></div></section></>}
+</h1><a href="#ofertas" className="hero-mockup-link mx-auto mt-3 block w-full sm:mt-5"><img src={HERO_MOCKUP} srcSet={HERO_MOCKUP_SRCSET} sizes="(max-width: 559px) 100vw, 1040px" alt="Mockup +150 Mapas de Metacognição" width={1024} height={1024} fetchPriority="high" loading="eager" decoding="async" className="hero-mockup-image mx-auto block h-auto w-full object-contain"/></a><p className="mx-auto mt-7 max-w-2xl text-base font-medium leading-relaxed text-slate-600 sm:text-xl">Entenda seus padrões de pensamento, reconheça hábitos automáticos e aprenda a tomar decisões mais conscientes com mapas mentais visuais e fáceis de revisar.</p><div className="mx-auto mt-5 max-w-xl"><Button href="#ofertas" onClick={()=>document.getElementById("ofertas")?.scrollIntoView({behavior:"smooth",block:"start"})}>QUERO MEUS MAPAS</Button></div><div className="hero-assurance-strip" aria-label="Garantias da compra"><div className="hero-assurance-item"><ShieldCheck className="hero-assurance-icon hero-assurance-shield" aria-hidden="true"/><span>Compra<br/>Segura</span></div><div className="hero-assurance-item"><Trophy className="hero-assurance-icon hero-assurance-trophy" aria-hidden="true"/><span>Satisfação<br/>Garantida</span></div><div className="hero-assurance-item"><LockKeyhole className="hero-assurance-icon hero-assurance-lock" aria-hidden="true"/><span>Privacidade<br/>Protegida</span></div></div></div></section></>}
 function MapsSection(){
   const previewMaps = [
     {file:"Creating_metacognition_mind_map_2K_20261026003658.jpg",alt:"Mapa mental de metacognição — exemplo 1"},
@@ -51,12 +54,15 @@ function MapsSection(){
     {file:"Scientific_mind_maps_metacogniti…_2K_20261026003733.jpg",alt:"Mapa mental de metacognição — exemplo 5"}
   ];
   const previewImageUrl = (file:string) => `https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/${encodeURIComponent(file)}`;
+  const previewImageSrcSet = (file:string) => [320, 480, 640]
+    .map((width) => `${optimizeImage(previewImageUrl(file), width, 60)} ${width}w`)
+    .join(', ');
   const renderMapGroup = (duplicate:boolean) => (
     <div className="maps-auto-group" aria-hidden={duplicate}>
       {previewMaps.map((map) => (
         <article className="maps-preview-card" key={duplicate ? `duplicate-${map.file}` : map.file}>
           <div className="maps-preview-image">
-            <img src={previewImageUrl(map.file)} alt={duplicate ? "" : map.alt} loading={duplicate ? "lazy" : "eager"} decoding="async"/>
+            <img src={optimizeImage(previewImageUrl(map.file), 480, 60)} srcSet={previewImageSrcSet(map.file)} sizes="(max-width: 700px) 78vw, 320px" alt={duplicate ? "" : map.alt} width={640} height={480} loading="lazy" fetchPriority="low" decoding="async"/>
           </div>
         </article>
       ))}
@@ -167,7 +173,7 @@ function Bonuses(){
           {bonuses.map(({title,description,image}, index) => (
             <article key={title} className="bonus-card">
               <div className="bonus-card-image">
-                <img src={image} alt={title} width={720} height={720} loading="lazy" decoding="async"/>
+                <img src={optimizeImage(image, 480, 60)} srcSet={[320, 480, 640].map((width) => `${optimizeImage(image, width, 60)} ${width}w`).join(', ')} sizes="(max-width: 700px) 82vw, 320px" alt={title} width={720} height={720} loading="lazy" fetchPriority="low" decoding="async"/>
               </div>
               <div className="bonus-card-copy">
                 <h3>{title}</h3>
@@ -206,7 +212,7 @@ function Pricing({onUpgrade}:{onUpgrade:()=>void}){
       {complete&&<span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-blue-600 px-4 py-1.5 text-xs font-black uppercase text-white shadow-md"><Star className="mr-1 inline h-3.5 w-3.5 fill-current"/>MAIS ESCOLHIDO</span>}
       <h3 className="text-2xl font-black sm:text-3xl">{complete?'Plano Completo':'Material Essencial'}</h3>
       {!complete&&<p className="pricing-subtitle mt-1 text-xs font-black uppercase tracking-wide">+150 MAPAS MENTAIS DE METACOGNIÇÃO</p>}
-      {complete&&<img src={HERO_MOCKUP} alt="Plano Completo com +150 Mapas Mentais de Metacognição" width={1024} height={1024} className="mx-auto mt-5 w-full max-w-[330px] object-contain" loading="lazy" decoding="async" fetchPriority="low"/>}
+      {complete&&<img src={HERO_MOCKUP} srcSet={HERO_MOCKUP_SRCSET} sizes="(max-width: 360px) 90vw, 330px" alt="Plano Completo com +150 Mapas Mentais de Metacognição" width={1024} height={1024} className="mx-auto mt-5 w-full max-w-[330px] object-contain" loading="lazy" decoding="async" fetchPriority="low"/>}
       <ul className="mt-7 flex-1 space-y-3">
         {features.map((feature,i)=><li key={feature} className="flex items-center gap-3 text-sm font-bold sm:text-base"><Check className="h-5 w-5 shrink-0 text-blue-600"/><span>{feature}</span></li>)}
       </ul>
@@ -227,7 +233,7 @@ function Pricing({onUpgrade}:{onUpgrade:()=>void}){
     </div>
   </section>;
 }
-function Guarantee(){return <section id="garantia" className="perf-section bg-[#050914] px-4 py-10 sm:py-14"><div className="guarantee-outer mx-auto max-w-5xl"><h2 className="guarantee-main-title"><span className="guarantee-title-line">Você tem <span className="guarantee-title-cyan">30</span></span><span className="guarantee-title-line"><span className="guarantee-title-cyan">dias</span> para testar</span></h2><div className="guarantee-inner mx-auto grid items-center gap-7 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8"><div className="guarantee-seal flex justify-center" style={{display:"flex",alignItems:"center",justifyContent:"center",width:220,height:220,minWidth:220,minHeight:220,margin:"0 auto",padding:10,boxSizing:"border-box",background:"#FFFFFF",border:"2px solid #D9B45B",borderRadius:"50%",boxShadow:"0 8px 24px rgba(0,0,0,.22)"}}><img src="https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Selo%20Dourado%20de%20Garantia%2030%20Dias.png?v=20261026" alt="Selo dourado de garantia de 30 dias" width={320} height={320} className="block h-full w-full object-contain opacity-100" style={{display:"block",width:"100%",height:"100%",padding:4,objectFit:"contain",opacity:1,visibility:"visible",filter:"none",background:"#FFFFFF",borderRadius:"50%"}} loading="eager" decoding="async" fetchPriority="high" onError={event=>{const image=event.currentTarget;const step=Number(image.dataset.fallbackStep||"0");const fallbacks=["https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Selo30dias.webp?v=20261026","https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Selo%20Dourado%20de%20Garantia%2030%20Dias.png?v=20261026"];if(step<fallbacks.length){image.dataset.fallbackStep=String(step+1);image.src=fallbacks[step];}}}/></div><div className="guarantee-copy"><p className="guarantee-description">Após realizar a compra, você poderá acessar, baixar e explorar todos os +150 Mapas Mentais de Metacognição e todos os bônus. Se por qualquer motivo você achar que o material não atende às suas expectativas, basta solicitar o reembolso integral dentro de 30 dias com apenas 1 clique.</p><button type="button" className="guarantee-cta" onClick={()=>{const offers=document.getElementById("ofertas");if(offers){offers.scrollIntoView({behavior:"smooth",block:"start"});}}}>QUERO ACESSAR COM 30 DIAS DE GARANTIA <span aria-hidden="true">→</span></button></div></div></div></section>}
+function Guarantee(){return <section id="garantia" className="perf-section bg-[#050914] px-4 py-10 sm:py-14"><div className="guarantee-outer mx-auto max-w-5xl"><h2 className="guarantee-main-title"><span className="guarantee-title-line">Você tem <span className="guarantee-title-cyan">30</span></span><span className="guarantee-title-line"><span className="guarantee-title-cyan">dias</span> para testar</span></h2><div className="guarantee-inner mx-auto grid items-center gap-7 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8"><div className="guarantee-seal flex justify-center" style={{display:"flex",alignItems:"center",justifyContent:"center",width:220,height:220,minWidth:220,minHeight:220,margin:"0 auto",padding:10,boxSizing:"border-box",background:"#FFFFFF",border:"2px solid #D9B45B",borderRadius:"50%",boxShadow:"0 8px 24px rgba(0,0,0,.22)"}}><img src={optimizeImage("https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Selo%20Dourado%20de%20Garantia%2030%20Dias.png?v=20261026", 320, 60)} alt="Selo dourado de garantia de 30 dias" width={320} height={320} className="block h-full w-full object-contain opacity-100" style={{display:"block",width:"100%",height:"100%",padding:4,objectFit:"contain",opacity:1,visibility:"visible",filter:"none",background:"#FFFFFF",borderRadius:"50%"}} loading="lazy" decoding="async" fetchPriority="low" onError={event=>{const image=event.currentTarget;const step=Number(image.dataset.fallbackStep||"0");const fallbacks=["https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Selo30dias.webp?v=20261026","https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Selo%20Dourado%20de%20Garantia%2030%20Dias.png?v=20261026"];if(step<fallbacks.length){image.dataset.fallbackStep=String(step+1);image.src=fallbacks[step];}}}/></div><div className="guarantee-copy"><p className="guarantee-description">Após realizar a compra, você poderá acessar, baixar e explorar todos os +150 Mapas Mentais de Metacognição e todos os bônus. Se por qualquer motivo você achar que o material não atende às suas expectativas, basta solicitar o reembolso integral dentro de 30 dias com apenas 1 clique.</p><button type="button" className="guarantee-cta" onClick={()=>{const offers=document.getElementById("ofertas");if(offers){offers.scrollIntoView({behavior:"smooth",block:"start"});}}}>QUERO ACESSAR COM 30 DIAS DE GARANTIA <span aria-hidden="true">→</span></button></div></div></div></section>}
 function FAQ(){
   const[open,setOpen]=useState<number|null>(0);
   const items=[
