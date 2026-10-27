@@ -8,7 +8,7 @@ const optimizeImage = (source: string, width: number, quality: 60 | 70 | 75 = 70
   `/_vercel/image?url=${encodeURIComponent(source)}&w=${width}&q=${quality}`;
 const HERO_MOCKUP = HERO_SOURCE;
 const img = (name: string, width = 768) => optimizeImage(ASSET + encodeURIComponent(name), width, 70);
-const CHECKOUTS = { ESSENCIAL: 'https://app.zuptos.com.br/checkout/597422a2be19f26c', COMPLETO: 'https://app.zuptos.com.br/checkout/dc9508e2442481d9', UPSELL: 'https://app.zuptos.com.br/checkout/40d7bf7e99b9c963' };
+const CHECKOUTS = { ESSENCIAL: 'https://app.zuptos.com.br/checkout/379b8701b0decb56', COMPLETO: 'https://app.zuptos.com.br/checkout/555265f25997ca6c', UPSELL: 'https://app.zuptos.com.br/checkout/3562e3fbe46e2e86' };
 
 /** Repasse ao checkout os parâmetros de campanha recebidos pela página de vendas. */
 const checkoutHref = (checkoutUrl: string) => {
