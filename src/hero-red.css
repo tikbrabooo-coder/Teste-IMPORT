@@ -1637,17 +1637,18 @@ html body section#bonus-section.perf-section {
 }
 
 
-/* Pequeno aumento de altura e fundo bege suave no pop-up de upgrade. */
+/* Pop-up mais compacto, sem espaço vazio na parte inferior. */
 #upgrade-modal-card {
-  min-height: 350px !important;
+  height: auto !important;
+  min-height: 0 !important;
   max-height: min(84vh, 520px) !important;
-  padding: 27px 22px 24px !important;
+  padding: 22px 22px 17px !important;
   background: #FBF7EF !important;
   border-color: #E9E0D2 !important;
 }
 @media (max-width: 400px) {
   #upgrade-modal-card {
-    min-height: 330px !important;
-    padding: 23px 19px 21px !important;
+    min-height: 0 !important;
+    padding: 19px !important;
   }
 }
