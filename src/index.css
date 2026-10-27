@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @keyframes subtle-pulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 12px rgba(16,185,129,.35), 0 12px 34px rgba(16,185,129,.18); }
-  50% { transform: scale(1.025); box-shadow: 0 0 20px rgba(16,185,129,.55), 0 15px 42px rgba(16,185,129,.25); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.015); }
 }
 .animate-subtle-pulse { filter: drop-shadow(0 4px 12px rgba(16,185,129,.3)); animation: 2s cubic-bezier(.4,0,.6,1) infinite subtle-pulse; }
 .shadow-soft { box-shadow: 0 4px 20px -4px rgba(15,23,42,.06), 0 2px 6px -2px rgba(15,23,42,.04); }
@@ -807,14 +807,8 @@ footer {
 
 /* CTAs verdes da headline e do FAQ: verde mais vivo e pulsação moderadamente mais visível. */
 @keyframes green-cta-pulse {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 7px 22px rgba(5, 185, 102, .34), 0 2px 6px rgba(0, 0, 0, .08);
-  }
-  50% {
-    transform: scale(1.025);
-    box-shadow: 0 10px 30px rgba(5, 185, 102, .48), 0 0 0 5px rgba(5, 185, 102, .09);
-  }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.015); }
 }
 
 #hero-section .max-w-xl > a,
@@ -1274,12 +1268,8 @@ footer {
 
 /* Botões de compra dos dois planos: verde vivo com brilho suave. */
 @keyframes pricing-green-glow {
-  0%, 100% {
-    box-shadow: 0 0 0 1px rgba(94, 255, 150, .34), 0 0 13px rgba(0, 230, 87, .36), 0 8px 20px rgba(0, 173, 70, .25) !important;
-  }
-  50% {
-    box-shadow: 0 0 0 2px rgba(94, 255, 150, .46), 0 0 22px rgba(0, 255, 96, .56), 0 10px 26px rgba(0, 173, 70, .32) !important;
-  }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.012); }
 }
 
 #ofertas .pricing-card a {
