@@ -21,15 +21,20 @@ const checkoutHref = (checkoutUrl: string) => {
   if (typeof window === 'undefined') return checkoutUrl;
 
   const incomingParams = new URLSearchParams(window.location.search);
-  const trackingParams = [...incomingParams.entries()].filter(([key, value]) =>
-    /^(utm_[a-z0-9_]+|fbclid|gclid|gbraid|wbraid|ttclid|twclid|msclkid|xcod|sck|src|sub[_-]?id[_-]?\d*|sub\d+|aff[_-]?sub[_-]?\d*|click[_-]?id|li_fat_id|epik|rdt_cid|sc_cid)$/i.test(key) && value.trim() !== ''
-  );
-
-  if (trackingParams.length === 0) return checkoutUrl;
+  const isTrackingParam = (key: string) =>
+    /^(utm_[a-z0-9_]+|fbclid|gclid|gbraid|wbraid|ttclid|twclid|msclkid|xcod|sck|src|sub[_-]?id[_-]?\d*|sub\d+|aff[_-]?sub[_-]?\d*|click[_-]?id|li_fat_id|epik|rdt_cid|sc_cid)$/i.test(key);
 
   const destination = new URL(checkoutUrl);
-  trackingParams.forEach(([key, value]) => {
-    if (!destination.searchParams.has(key)) destination.searchParams.set(key, value);
+  // Remove UTMs antigos que foram copiados quando o componente foi renderizado.
+  [...destination.searchParams.keys()].forEach((key) => {
+    if (isTrackingParam(key)) destination.searchParams.delete(key);
+  });
+
+  // Lê os parâmetros atuais no momento do clique e os envia ao checkout.
+  incomingParams.forEach((value, key) => {
+    if (isTrackingParam(key) && value.trim() !== '') {
+      destination.searchParams.set(key, value);
+    }
   });
 
   return destination.toString();
@@ -41,7 +46,7 @@ const bonuses = [
   {title:'Kit de Clareza Mental e Organização de Ideias',description:'Estruture ideias e transforme pensamentos dispersos em um plano visual.',image:'https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Kit%20de%20Clareza%20Mental%203D.png'},
   {title:'Manual para Questionar as Próprias Conclusões',description:'Use perguntas guiadas para examinar interpretações e conclusões com mais cuidado.',image:'https://raw.githubusercontent.com/tikbrabooo-coder/Teste-IMPORT/main/Manual%20Para%20Questionar%20Conclus%C3%B5es%20%281%29.png'}
 ];
-const navigateToCheckout=(event:React.MouseEvent<HTMLAnchorElement>,checkoutUrl:string)=>{event.preventDefault();const link=event.currentTarget;if(link.dataset.checkoutPending==="true")return;link.dataset.checkoutPending="true";link.setAttribute('aria-busy','true');window.setTimeout(()=>window.location.assign(checkoutUrl),300)};
+const navigateToCheckout=(event:React.MouseEvent<HTMLAnchorElement>,checkoutUrl:string)=>{event.preventDefault();const link=event.currentTarget;if(link.dataset.checkoutPending==="true")return;link.dataset.checkoutPending="true";link.setAttribute('aria-busy','true');const destination=checkoutHref(checkoutUrl);window.setTimeout(()=>window.location.assign(destination),300)}
 const Button=({href,children,muted=false,onClick}:{href?:string;children:React.ReactNode;muted?:boolean;onClick?:()=>void})=>{const isCheckout=Boolean(href&&(href.includes('payfast.greenn.com.br/redirect/')||href.includes('app.zuptos.com.br/checkout/')));const className=`inline-flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-4 text-center font-extrabold uppercase transition ${isCheckout?'go-to-checkout ':''}${muted?'border border-slate-300 bg-white text-slate-900 hover:bg-slate-50':'bg-emerald-600 text-white shadow-pink-cta hover:bg-emerald-700'}`;const inner=<><span>{children}</span><ArrowRight className="h-5 w-5"/></>;if(isCheckout&&href)return <a href={href} onClick={event=>navigateToCheckout(event,href)} className={className}>{inner}</a>;return <a href={href||'#'} onClick={onClick?e=>{e.preventDefault();onClick()}:undefined} className={className}>{inner}</a>};
 function Hero(){return <><aside className="hero-offer-banner w-full bg-[#E53935] px-3 py-2 text-center text-xs font-bold text-white sm:text-sm"><span className="hero-offer-text">Oferta por tempo limitado disponível apenas hoje</span></aside><section id="hero-section" className="bg-[#071329] px-4 pb-12 pt-9 text-slate-100 sm:pb-20 sm:pt-12"><div className="mx-auto max-w-[1229px] text-center"><h1 className="metacognition-headline mx-auto w-full px-1 text-center">
   <span className="headline-main headline-line-one"><span className="headline-number">+150</span><span>Mapas</span></span>
